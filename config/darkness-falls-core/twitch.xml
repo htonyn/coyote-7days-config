@@ -1,0 +1,208 @@
+<config>
+	<append xpath="/twitch">
+		<!-- Demonics are DISABLED by default -->
+		<action name="twitch_RadDog" extends="twitch_boomZombie">
+			<property name="command" value="#raddog" />
+			<!-- <property name="command_key" value="TwitchAction_SpawnRadDogCommand" /> -->
+			<property name="title_key" value="TwitchAction_SpawnRadDog" />
+			<property name="description_key" value="TwitchAction_SpawnRadDogDesc" />
+			<property name="start_gamestage" value="95" />
+			<property name="event_name" value="spawn_raddog" />
+			<property name="default_cost" value="100" />
+			<property name="cooldown" value="30" />
+			<property name="enabled" value="true" />
+		</action>
+
+		<action name="twitch_arachnid" extends="twitch_boomZombie">
+			<property name="command" value="#arachnid" />
+			<!-- <property name="command_key" value="TwitchAction_SpawnArachnidCommand" /> -->
+			<property name="title_key" value="TwitchAction_SpawnArachnid" />
+			<property name="description_key" value="TwitchAction_SpawnArachnidDesc" />
+			<property name="start_gamestage" value="50" />
+			<property name="event_name" value="spawn_arachnid" />
+			<property name="default_cost" value="150" />
+			<property name="cooldown" value="30" />
+			<property name="enabled" value="true" />
+		</action>
+
+		<action name="twitch_cow" extends="twitch_boomZombie">
+			<property name="command" value="#cow" />
+			<!-- <property name="command_key" value="TwitchAction_SpawnCowCommand" /> -->
+			<property name="title_key" value="TwitchAction_SpawnCow" />
+			<property name="description_key" value="TwitchAction_SpawnCowDesc" />
+			<property name="start_gamestage" value="10" />
+			<property name="event_name" value="spawn_cow" />
+			<property name="default_cost" value="50" />
+			<property name="cooldown" value="30" />
+			<property name="enabled" value="true" />
+		</action>
+
+		<action name="twitch_beefdog" extends="twitch_spider1">
+			<property name="command" value="#beefdog" />
+			<!-- <property name="command_key" value="TwitchAction_SpawnBeefdogCommand" /> -->
+			<property name="title_key" value="TwitchAction_SpawnBeefdog" />
+			<property name="description_key" value="TwitchAction_SpawnBeefdogDesc" />
+			<property name="start_gamestage" value="50" />
+			<property name="event_name" value="spawn_beefdog" />
+			<property name="default_cost" value="150" />
+			<property name="cooldown" value="30" />
+			<property name="enabled" value="true" />
+		</action>
+
+		<action name="twitch_hornet" extends="twitch_boomZombie">
+			<property name="command" value="#hornet" />
+			<!-- <property name="command_key" value="TwitchAction_SpawnHornetCommand" /> -->
+			<property name="title_key" value="TwitchAction_SpawnHornet" />
+			<property name="description_key" value="TwitchAction_SpawnHornetDesc" />
+			<property name="start_gamestage" value="50" />
+			<property name="event_name" value="spawn_hornet" />
+			<property name="default_cost" value="75" />
+			<property name="cooldown" value="30" />
+			<property name="enabled" value="true" />
+		</action>
+
+		<action name="twitch_mutantspider" extends="twitch_boomZombie">
+			<property name="command" value="#mutantspider" />
+			<!-- <property name="command_key" value="TwitchAction_SpawnMutantSpiderCommand" /> -->
+			<property name="title_key" value="TwitchAction_SpawnMutantSpider" />
+			<property name="description_key" value="TwitchAction_SpawnMutantSpiderDesc" />
+			<property name="start_gamestage" value="275" />
+			<property name="event_name" value="spawn_mutantspider" />
+			<property name="default_cost" value="400" />
+			<property name="cooldown" value="30" />
+			<property name="enabled" value="false" /> <!-- Disabled -->
+		</action>
+
+		<action name="twitch_hellwolf" extends="twitch_boomZombie">
+			<property name="command" value="#hellwolf" />
+			<!-- <property name="command_key" value="TwitchAction_SpawnHellwolfCommand" /> -->
+			<property name="title_key" value="TwitchAction_SpawnHellwolf" />
+			<property name="description_key" value="TwitchAction_SpawnHellwolfDesc" />
+			<property name="start_gamestage" value="300" />
+			<property name="event_name" value="spawn_hellwolf" />
+			<property name="default_cost" value="500" />
+			<property name="cooldown" value="30" />
+			<property name="enabled" value="false" /> <!-- Disabled -->
+		</action>
+
+		<action name="twitch_mutatedfootballer" extends="twitch_boomZombie">
+			<property name="command" value="#mutatedfootballer" />
+			<!-- <property name="command_key" value="TwitchAction_SpawnMutatedFootballerCommand" /> -->
+			<property name="title_key" value="TwitchAction_SpawnMutatedFootballer" />
+			<property name="description_key" value="TwitchAction_SpawnMutatedFootballerDesc" />
+			<property name="start_gamestage" value="140" />
+			<property name="event_name" value="spawn_mutatedfootballer" />
+			<property name="default_cost" value="150" />
+			<property name="cooldown" value="30" />
+			<property name="enabled" value="true" />
+		</action>
+
+		<action name="twitch_mutatednurse" extends="twitch_boomZombie">
+			<property name="command" value="#mutatednurse" />
+			<!-- <property name="command_key" value="TwitchAction_SpawnMutatedNurseCommand" /> -->
+			<property name="title_key" value="TwitchAction_SpawnMutatedNurse" />
+			<property name="description_key" value="TwitchAction_SpawnMutatedNurseDesc" />
+			<property name="start_gamestage" value="140" />
+			<property name="event_name" value="spawn_mutatednurse" />
+			<property name="default_cost" value="150" />
+			<property name="cooldown" value="30" />
+			<property name="enabled" value="true" />
+		</action>
+
+		<action name="twitch_mutatedsoldier" extends="twitch_boomZombie">
+			<property name="command" value="#mutatedsoldier" />
+			<!-- <property name="command_key" value="TwitchAction_SpawnMutatedSoldierCommand" /> -->
+			<property name="title_key" value="TwitchAction_SpawnMutatedSoldier" />
+			<property name="description_key" value="TwitchAction_SpawnMutatedSoldierDesc" />
+			<property name="start_gamestage" value="140" />
+			<property name="event_name" value="spawn_mutatedsoldier" />
+			<property name="default_cost" value="150" />
+			<property name="cooldown" value="30" />
+			<property name="enabled" value="true" />
+		</action>
+
+		<action name="twitch_wightdemon" extends="twitch_boomZombie">
+			<property name="command" value="#wightdemon" />
+			<!-- <property name="command_key" value="TwitchAction_SpawnWightDemonCommand" /> -->
+			<property name="title_key" value="TwitchAction_SpawnWightDemon" />
+			<property name="description_key" value="TwitchAction_SpawnWightDemonDesc" />
+			<property name="start_gamestage" value="300" />
+			<property name="event_name" value="spawn_wightdemon" />
+			<property name="default_cost" value="500" />
+			<property name="cooldown" value="30" />
+			<property name="enabled" value="false" /> <!-- Disabled -->
+		</action>
+
+		<action name="twitch_labdemon" extends="twitch_boomZombie">
+			<property name="command" value="#labdemon" />
+			<!-- <property name="command_key" value="TwitchAction_SpawnLabDemonCommand" /> -->
+			<property name="title_key" value="TwitchAction_SpawnLabDemon" />
+			<property name="description_key" value="TwitchAction_SpawnLabDemonDesc" />
+			<property name="start_gamestage" value="300" />
+			<property name="event_name" value="spawn_labdemon" />
+			<property name="default_cost" value="500" />
+			<property name="cooldown" value="30" />
+			<property name="enabled" value="false" /> <!-- Disabled -->
+		</action>
+
+		<action name="twitch_nightstalker" extends="twitch_boomZombie">
+			<property name="command" value="#nightstalker" />
+			<!-- <property name="command_key" value="TwitchAction_SpawnNightstalkerCommand" /> -->
+			<property name="title_key" value="TwitchAction_SpawnNightstalker" />
+			<property name="description_key" value="TwitchAction_SpawnNightstalkerDesc" />
+			<property name="start_gamestage" value="120" />
+			<property name="event_name" value="spawn_nightstalker" />
+			<property name="default_cost" value="200" />
+			<property name="cooldown" value="30" />
+			<property name="enabled" value="true" />
+		</action>
+
+		<action name="twitch_behemoth" extends="twitch_boomZombie">
+			<property name="command" value="#behemoth" />
+			<!-- <property name="command_key" value="TwitchAction_SpawnBehemothCommand" /> -->
+			<property name="title_key" value="TwitchAction_SpawnBehemoth" />
+			<property name="description_key" value="TwitchAction_SpawnBehemothDesc" />
+			<property name="start_gamestage" value="175" />
+			<property name="event_name" value="spawn_behemoth" />
+			<property name="default_cost" value="500" />
+			<property name="cooldown" value="30" />
+			<property name="enabled" value="true" />
+		</action>
+
+		<action name="twitch_titan" extends="twitch_boomZombie">
+			<property name="command" value="#titan" />
+			<!-- <property name="command_key" value="TwitchAction_SpawnTitanCommand" /> -->
+			<property name="title_key" value="TwitchAction_SpawnTitan" />
+			<property name="description_key" value="TwitchAction_SpawnTitanDesc" />
+			<property name="start_gamestage" value="300" />
+			<property name="event_name" value="spawn_titan" />
+			<property name="default_cost" value="650" />
+			<property name="cooldown" value="30" />
+			<property name="enabled" value="false" /> <!-- Disabled -->
+		</action>
+
+		<action name="twitch_succubus" extends="twitch_boomZombie">
+			<property name="command" value="#succubus" />
+			<!-- <property name="command_key" value="TwitchAction_SpawnSuccubusCommand" /> -->
+			<property name="title_key" value="TwitchAction_SpawnSuccubus" />
+			<property name="description_key" value="TwitchAction_SpawnSuccubusDesc" />
+			<property name="start_gamestage" value="400" />
+			<property name="event_name" value="spawn_succubus" />
+			<property name="default_cost" value="800" />
+			<property name="cooldown" value="30" />
+			<property name="enabled" value="false" /> <!-- Disabled -->
+		</action>
+
+		<action name="twitch_scarecrow" extends="twitch_boomZombie">
+			<property name="command" value="#scarecrow" />
+			<!-- <property name="command_key" value="TwitchAction_SpawnScarecrowCommand" /> -->
+			<property name="title_key" value="TwitchAction_SpawnScarecrow" />
+			<property name="description_key" value="TwitchAction_SpawnScarecrowDesc" />
+			<property name="start_gamestage" value="10" />
+			<property name="event_name" value="spawn_scarecrow" />
+			<property name="default_cost" value="25" />
+			<property name="cooldown" value="30" />
+			<property name="enabled" value="true" />
+		</action>
+	</append>
+</config>
