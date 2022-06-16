@@ -1213,8 +1213,8 @@
 		<property name="category" value="Buffs,Debuffs" />
 		<property name="start_gamestage" value="10" />
 		<property name="event_name" value="buff_novehicle" />
-		<property name="default_cost" value="250" />
-		<property name="cooldown" value="600" />
+		<property name="default_cost" value="5000" />
+		<property name="cooldown" value="6000" />
 		<property name="cooldown_blocked" value="true" />
 		
 	</action>
