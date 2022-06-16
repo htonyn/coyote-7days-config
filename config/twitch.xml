@@ -1510,9 +1510,9 @@
 		<property name="category" value="Special" />
 		<property name="start_gamestage" value="30" />
 		<property name="event_name" value="action_spoil" />
-		<property name="default_cost" value="150" />
+		<property name="default_cost" value="10000" />
 		<property name="is_positive" value="false" />
-		<property name="cooldown" value="600" />
+		<property name="cooldown" value="6000" />
 		<property name="cooldown_blocked" value="true" />
 		<property name="random_group" value="special_bad" />
 	</action>
