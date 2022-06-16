@@ -719,7 +719,7 @@
 	</action>
 	
 	<action name="twitch_spawnBicycle" extends="twitch_spawnWeapon1">
-		<property name="command" value="#bicycle" />
+		<property name="command" value="#bike" />
 		<property name="title_key" value="TwitchAction_SupplyBicycle" />
 		<property name="description_key" value="TwitchAction_SupplyBicycleDesc" />
 		<property name="start_gamestage" value="5" />
@@ -944,6 +944,127 @@
 		<property name="event_name" value="spawn_robo3" />
 		<property name="default_cost" value="300" />
 		<property name="cooldown" value="600" />
+	</action>
+
+    <!-- CUSTOM CRATE SPAWN TEMPLATE -->
+
+    <action name="twitch_spawn_god">
+		<property name="is_crate" value="true" />
+		<property name="default_cost" value="0" />
+		<property name="ignore_cooldown" value="true" />
+		<property name="add_cooldown" value="false" />
+		<property name="cooldown_blocked" value="false" />
+		<property name="waiting_blocked" value="false" />
+		<property name="only_usable_type" value="Name" />
+		<property name="only_usable_by" value="ponkberry,ObiWannCoyote" />
+	</action>
+
+    <!-- CUSTOM CRATE COMMANDS -->
+
+	<action name="twitch_cheer_knowledge1">
+		<property name="command" value="cheer300" />
+		<property name="event_name" value="spawn_random_knowledge" />
+		<property name="category" value="Spawns,Supplies" />
+		<property name="is_crate" value="true" />
+		<property name="default_cost" value="300" />
+		<property name="ignore_cooldown" value="true" />
+		<property name="add_cooldown" value="false" />
+		<property name="cooldown_blocked" value="false" />
+		<property name="waiting_blocked" value="false" />
+		<property name="is_positive" value="true" />
+		<property name="cooldown" value="0" />
+	</action>
+
+	<action name="twitch_spawnTier1Crate" extends="twitch_spawnWeapon1">
+		<property name="command" value="#random1" />
+		<property name="start_gamestage" value="5" />
+		<property name="event_name" value="spawn_tier1" />
+		<property name="default_cost" value="150" />
+		<property name="cooldown" value="120" />
+	</action>
+
+	<action name="twitch_spawnTier2Crate" extends="twitch_spawnWeapon1">
+		<property name="command" value="#random2" />
+		<property name="start_gamestage" value="50" />
+		<property name="event_name" value="spawn_tier2" />
+		<property name="default_cost" value="250" />
+		<property name="cooldown" value="120" />
+	</action>
+
+	<action name="twitch_spawnTier3Crate" extends="twitch_spawnWeapon1">
+		<property name="command" value="#random3" />
+		<property name="start_gamestage" value="75" />
+		<property name="event_name" value="spawn_tier3" />
+		<property name="default_cost" value="350" />
+		<property name="cooldown" value="120" />
+	</action>
+
+	<action name="twitch_coy_loot" extends="twitch_spawnWeapon1">
+		<property name="command" value="#coy_loot" />
+		<property name="start_gamestage" value="50" />
+		<property name="event_name" value="spawn_coyloot" />
+		<property name="default_cost" value="1000" />
+		<property name="cooldown" value="120" />
+	</action>
+
+	<action name="twitch_streamer_loot" extends="twitch_spawnWeapon1">
+		<property name="command" value="#streamer_loot" />
+		<property name="start_gamestage" value="100" />
+		<property name="event_name" value="spawn_loot" />
+		<property name="default_cost" value="2000" />		
+		<property name="cooldown" value="600" />
+	</action>
+
+	<action name="twitch_megs" extends="twitch_spawnWeapon1">
+		<property name="command" value="#meggs" />
+		<property name="start_gamestage" value="10" />
+		<property name="event_name" value="spawn_meggs" />
+		<property name="default_cost" value="250" />		
+		<property name="cooldown" value="300" />
+	</action>
+
+	<action name="twitch_spawn_custom1" extends="twitch_spawn_god">
+		<property name="command" value="#custom1" />
+		<property name="category" value="Special" />
+		<property name="event_name" value="spawn_custom1" />
+		<property name="default_cost" value="0" />
+	</action>
+
+	<action name="twitch_spawn_custom2" extends="twitch_spawn_god">
+		<property name="command" value="#custom2" />
+		<property name="category" value="Special" />
+		<property name="event_name" value="spawn_custom2" />
+		<property name="default_cost" value="0" />
+	</action>
+
+	<action name="twitch_knowledge" extends="twitch_spawn_god">
+		<property name="command" value="#smort" />
+		<property name="category" value="Special" />
+		<property name="event_name" value="spawn_knowledge" />
+	</action>
+
+	<action name="twitch_test" extends="twitch_spawn_god">
+		<property name="command" value="#test" />
+		<property name="category" value="Special" />
+		<property name="event_name" value="spawn_test" />
+	</action>
+
+	<action name="twitch_erangel_med_surplus" extends="twitch_spawn_god">
+		<property name="command" value="#erangel_med_surplus" />
+		<property name="category" value="Special" />
+		<property name="event_name" value="spawn_medsurplus" />
+	</action>
+
+	<action name="twitch_ammodrop" extends="twitch_spawn_god">
+		<property name="command" value="#ammo_drop" />
+		<property name="category" value="Special" />
+		<property name="event_name" value="spawn_ammodrop" />
+	</action>
+
+	<action name="twitch_feastdrop" extends="twitch_spawn_god">
+		<property name="command" value="#feast" />
+		<property name="category" value="Special" />
+		<property name="event_name" value="spawn_feastdrop" />
 	</action>
 	
 	<!-- BUFFS/DEBUFFS -->

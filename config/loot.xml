@@ -8501,7 +8501,37 @@ If there is no hit the default quality is used.
 
 <!-- END_TWITCH_MODE -->
 
+<!-- CUSTOM CRATES -->
 
+<lootgroup name="twitch_custom1_crate" count="5" >
+	<item name="drinkCanMegaCrush" count="1,2"/>
+	<item name="casinoCoin" count="1000,2000"/>
+	<item name="resourceForgedIron" count="10,25"/>
+	<item name="resourceForgedSteel" count="5,20"/>
+	<item name="resourceConcreteMix" count="200"/>
+	<item name="ammoGasCan" count="200"/>
+	<item name="foodPumpkinCheesecake" count="1,2"/>
+</lootgroup>
+
+<lootgroup name="twitch_custom2_crate" count="5" >
+	<item name="foodHoboStew" count="1,2"/>
+	<item name="foodBlueberryPie" count="1,2"/>
+	<item name="foodTunaFishGravyToast" count="3,4"/>
+	<item name="foodPumpkinCheesecake" count="7,11"/>
+	<item name="drinkJarBlackStrapCoffee" count="3,4"/>
+	<item name="drinkJarGrandpasMoonshine" count="1,2"/>
+	<item name="drinkJarGrandpasAwesomeSauce" count="1"/>
+	<item name="drinkJarGrandpasLearningElixir" count="1"/>
+</lootgroup>
+
+<lootgroup name="meggs" count="all">
+	<item name="foodEgg" count="1,2"/>
+	<item name="foodEgg" count="1,2"/>
+	<item name="foodEgg" count="1,2"/>
+	<item name="foodEgg" count="1,2"/>
+	<item name="foodEgg" count="1,2"/>
+	<item name="foodEgg" count="1,2"/>
+</lootgroup>
 
 
 <!-- *** LOOT_LISTS -->
@@ -9478,6 +9508,23 @@ If there is no hit the default quality is used.
 
 <lootcontainer id="551" name="twitch_vote_rewardsT4" count="1" size="6,2" destroy_on_close="true" sound_open="SupplyDrops/open_supply_crate" sound_close="SupplyDrops/close_supply_crate"  open_time="0.25" loot_quality_template="qualBaseTemplate" ignore_loot_abundance="true">
 	<item group="twitch_T4_Rewards"/>
+</lootcontainer>
+
+<lootcontainer id="900" name="twitch_crate_test" count="1" size="6,2" destroy_on_close="true" sound_open="SupplyDrops/open_supply_crate" sound_close="SupplyDrops/close_supply_crate"  open_time="0.25" loot_quality_template="qualBaseTemplate" ignore_loot_abundance="true">
+	<item group="twitch_T4_Rewards"/>
+	<item group="groupTreasureMaps"/>
+</lootcontainer>
+
+<lootcontainer id="901" name="twitch_crate_megs" count="1" size="6,2" destroy_on_close="true" sound_open="SupplyDrops/open_supply_crate" sound_close="SupplyDrops/close_supply_crate"  open_time="0.25" loot_quality_template="qualBaseTemplate" ignore_loot_abundance="true">
+	<item group="megs"/>
+</lootcontainer>
+
+<lootcontainer id="902" name="twitch_custom1_crate" count="1" size="6,2" destroy_on_close="true" sound_open="SupplyDrops/open_supply_crate" sound_close="SupplyDrops/close_supply_crate"  open_time="0.25" loot_quality_template="qualBaseTemplate" ignore_loot_abundance="true">
+	<item group="twitch_custom1_crate"/>
+</lootcontainer>
+
+<lootcontainer id="903" name="twitch_custom2_crate" count="1" size="6,2" destroy_on_close="true" sound_open="SupplyDrops/open_supply_crate" sound_close="SupplyDrops/close_supply_crate"  open_time="0.25" loot_quality_template="qualBaseTemplate" ignore_loot_abundance="true">
+	<item group="twitch_custom2_crate"/>
 </lootcontainer>
 
 <!-- the max cap for lootcontainer id is 1023 -->
