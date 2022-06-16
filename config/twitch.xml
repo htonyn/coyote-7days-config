@@ -1466,8 +1466,7 @@
 		<cooldown_addition name="twitch_buffWeakenMelee" time="60" />
 		<cooldown_addition name="twitch_buffNoRanged" time="60" />
 		<cooldown_addition name="twitch_buffNoMelee" time="60" />
-		<cooldown_addition name="twitch_BigHead" time="90" />
-		
+		<cooldown_addition name="twitch_BigHead" time="90" />		
 	</action>
 	
 	<action name="twitch_buffConfuse">
@@ -1518,8 +1517,7 @@
 		<property name="is_positive" value="true" />
 		<property name="cooldown" value="300" />
 		
-		<cooldown_addition name="twitch_buffDeafen" time="150" />
-		
+		<cooldown_addition name="twitch_buffDeafen" time="150" />		
 	</action>
 	
 	<action name="twitch_Ragdoll">
@@ -1727,10 +1725,12 @@
 		
 		<cooldown_addition name="twitch_buffDeafen" time="90" />
 	</action>
+
+    <!--  -->
 	
 	<!-- Mod Commands -->
 	
-	<action name="twitch_mod_tpbackpack">
+	<!-- <action name="twitch_mod_tpbackpack">
 		<property name="command" value="#tp_backpack" />
 		<property name="title_key" value="TwitchAction_TeleportToBackpack" />
 		<property name="description_key" value="TwitchAction_TeleportToBackpackDesc" />
@@ -1742,6 +1742,19 @@
 		<property name="cooldown_blocked" value="false" />
 		<property name="waiting_blocked" value="false" />
 		<property name="only_usable_type" value="Mods" />
+	</action> -->
+
+    <action name="twitch_mod_tpbackpackponk">
+		<property name="command" value="#lol" />
+		<property name="category" value="Special" />
+		<property name="event_name" value="action_teleport_backpack" />
+		<property name="default_cost" value="0" />
+		<property name="ignore_cooldown" value="true" />
+		<property name="add_cooldown" value="false" />
+		<property name="cooldown_blocked" value="false" />
+		<property name="waiting_blocked" value="false" />
+		<property name="only_usable_type" value="Name" />
+		<property name="only_usable_by" value="ponkberry,msspenny,ObiWannCoyote" />
 	</action>
 	
 	<!-- 
