@@ -321,7 +321,7 @@
 	</action>
 	
 	<action name="twitch_coyote" extends="twitch_normalZombie">
-		<property name="command" value="#coyote" />
+		<property name="command" value="#dion" />
 		<property name="title_key" value="TwitchAction_SpawnCoyote" />
 		<property name="description_key" value="TwitchAction_SpawnCoyoteDesc" />
 		<property name="start_gamestage" value="5" />
@@ -689,7 +689,7 @@
 	</action>
 	
 	<action name="twitch_spawnBooks1" extends="twitch_spawnWeapon1">
-		<property name="command" value="#books" />
+		<property name="command" value="#knowledge" />
 		<property name="title_key" value="TwitchAction_SupplyBooks1" />
 		<property name="description_key" value="TwitchAction_SupplyBooks1Desc" />
 		<property name="start_gamestage" value="15" />
@@ -699,7 +699,7 @@
 	</action>
 	
 	<action name="twitch_spawnBooks2" extends="twitch_spawnWeapon1">
-		<property name="command" value="#books" />
+		<property name="command" value="#knowledge" />
 		<property name="title_key" value="TwitchAction_SupplyBooks2" />
 		<property name="description_key" value="TwitchAction_SupplyBooks2Desc" />
 		<property name="start_gamestage" value="55" />
@@ -709,7 +709,7 @@
 	</action>
 	
 	<action name="twitch_spawnBooks3" extends="twitch_spawnWeapon1">
-		<property name="command" value="#books" />
+		<property name="command" value="#knowledge" />
 		<property name="title_key" value="TwitchAction_SupplyBooks3" />
 		<property name="description_key" value="TwitchAction_SupplyBooks3Desc" />
 		<property name="start_gamestage" value="95" />
@@ -1395,7 +1395,7 @@
 		<property name="event_name" value="buff_sillysounds" />
 		<property name="default_cost" value="100" />
 		<property name="is_positive" value="true" />
-		<property name="cooldown" value="900" />
+		<property name="cooldown" value="300" />
 		
 		<cooldown_addition name="twitch_buffDeafen" time="150" />
 		
