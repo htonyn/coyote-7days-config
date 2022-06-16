@@ -15,7 +15,7 @@
 	
 -->
 
-<twitch party_kill_reward_max="250" chat_activity_time="300" nonsub_pp_cap="1000" sub_pp_cap="2000"
+<twitch party_kill_reward_max="250" chat_activity_time="150" nonsub_pp_cap="1000" sub_pp_cap="5000"
 	denied_crate_event="action_cratedenied" stealing_crate_event="action_cratesteal" party_respawn_event="buff_respawn" on_death_event="action_ondeath">
 
 	<!-- Categories must be defined at the top. Must at least have one. Safe bet you should probably keep "Commands" in there and at the top. -->
