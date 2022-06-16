@@ -1143,13 +1143,6 @@
 		<variable name="alertsound" value="vulturealert" />
 	</action_sequence>
 
-	<action_sequence name="oink_mf" template="spawn_triple_double">
-		<variable name="zombiename1" value="animalPig" />
-		<variable name="zombiename2" value="animalBoar" />
-		<variable name="zombiename3" value="animalBossGrace" />
-		<variable name="alertsound" value="vulturealert" />
-	</action_sequence>
-
 	<action_sequence name="cacaw" template="spawn_dion_and_friends">
 		<variable name="zombiename1" value="animalZombieVultureRadiated" />
 		<variable name="zombiename2" value="animalZombieVulture" />

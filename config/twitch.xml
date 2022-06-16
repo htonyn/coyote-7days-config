@@ -62,6 +62,8 @@
 		name - name of the action you are adding cooldown to.
 		time - amount of cooldown being added.
 	-->
+
+    <!-- Spawn Enemies -->
 	
 	<action name="twitch_normalZombie">
 		<property name="command" value="#normal" />
@@ -464,6 +466,180 @@
 		<property name="event_name" value="spawn_rad" />
 		<property name="default_cost" value="75" />
 	</action>
+
+    <!-- Custom Spawn Enemies -->
+
+    <action name="twitch_horde">
+		<property name="command" value="#horde" />
+		<property name="title" value="Small Horde" />
+		<property name="description" value="idk" />
+		<property name="category" value="Spawns" />
+		<property name="event_name" value="horde" />
+		<property name="default_cost" value="500" />
+		<property name="add_cooldown" value="true" />
+		<property name="cooldown_blocked" value="true" />
+		<property name="waiting_blocked" value="true" />
+		<property name="cooldown" value="180" />
+	</action>
+
+	<action name="twitch_dionandfriends">
+		<property name="command" value="#dionandfriends" />
+		<property name="title" value="Dion and his Friends" />
+		<property name="description" value="idk" />
+		<property name="category" value="Spawns" />
+		<property name="event_name" value="dionandfriends" />
+		<property name="default_cost" value="700" />
+		<property name="add_cooldown" value="true" />
+		<property name="cooldown_blocked" value="true" />
+		<property name="waiting_blocked" value="true" />
+		<property name="cooldown" value="180" />
+	</action>
+
+	<action name="twitch_cacaw">
+		<property name="command" value="#cacaw" />
+		<property name="title" value="CAWWWWWWW" />
+		<property name="description" value="idk" />
+		<property name="category" value="Spawns" />
+		<property name="event_name" value="cacaw" />
+		<property name="default_cost" value="750" />
+		<property name="add_cooldown" value="true" />
+		<property name="cooldown_blocked" value="true" />
+		<property name="waiting_blocked" value="true" />
+        <property name="start_gamestage" value="50" />
+		<property name="cooldown" value="180" />
+	</action>
+
+	<action name="twitch_coypack">
+		<property name="command" value="#coypack" />
+		<property name="title" value="woof" />
+		<property name="description" value="idk" />
+		<property name="category" value="Spawns" />
+		<property name="event_name" value="coypack" />
+		<property name="default_cost" value="750" />
+		<property name="add_cooldown" value="true" />
+		<property name="cooldown_blocked" value="true" />
+		<property name="waiting_blocked" value="true" />
+        <property name="start_gamestage" value="35" />
+		<property name="cooldown" value="180" />
+	</action>
+
+	<action name="twitch_screamer">
+		<property name="command" value="#christina" />
+		<property name="title" value="AHHHHHHHH" />
+		<property name="description" value="idk" />
+		<property name="category" value="Spawns" />
+		<property name="event_name" value="spawn_screamer" />
+		<property name="default_cost" value="0" />
+		<property name="ignore_cooldown" value="true" />
+		<property name="add_cooldown" value="false" />
+		<property name="cooldown_blocked" value="false" />
+		<property name="waiting_blocked" value="false" />
+		<property name="only_usable_type" value="Name" />
+		<property name="only_usable_by" value="ponkberry" />
+	</action>
+
+	<action name="twitch_grace">
+		<property name="command" value="#grace" />
+		<property name="title" value="AHHHHHHHH" />
+		<property name="description" value="idk" />
+		<property name="category" value="Spawns" />
+		<property name="event_name" value="spawn_grace" />
+		<property name="default_cost" value="400" />
+		<property name="add_cooldown" value="true" />
+		<property name="cooldown_blocked" value="true" />
+		<property name="waiting_blocked" value="true" />
+        <property name="start_gamestage" value="50" />
+		<property name="cooldown" value="180" />
+	</action>
+
+	<action name="twitch_horder">
+		<property name="command" value="#horder" />
+		<property name="title" value="Less Small Horde" />
+		<property name="description" value="idk" />
+		<property name="category" value="Spawns" />
+		<property name="event_name" value="horder" />
+		<property name="default_cost" value="0" />
+		<property name="ignore_cooldown" value="true" />
+		<property name="add_cooldown" value="false" />
+		<property name="cooldown_blocked" value="false" />
+		<property name="waiting_blocked" value="false" />
+		<property name="only_usable_type" value="Name" />
+		<property name="only_usable_by" value="ponkberry" />
+	</action>
+
+	<action name="twitch_cock">
+		<property name="command" value="#cock" />
+		<property name="title" value="cock" />
+		<property name="description" value="idk" />
+		<property name="category" value="Spawns" />
+		<property name="event_name" value="cock" />
+		<property name="default_cost" value="0" />
+		<property name="ignore_cooldown" value="true" />
+		<property name="add_cooldown" value="false" />
+		<property name="cooldown_blocked" value="false" />
+		<property name="waiting_blocked" value="false" />
+		<property name="only_usable_type" value="Name" />
+		<property name="only_usable_by" value="ponkberry" />
+	</action>
+
+	<action name="twitch_frendz">
+		<property name="command" value="#frendz" />
+		<property name="title" value="frendz" />
+		<property name="description" value="idk" />
+		<property name="category" value="Spawns" />
+		<property name="event_name" value="frendz" />
+		<property name="default_cost" value="0" />
+		<property name="ignore_cooldown" value="true" />
+		<property name="add_cooldown" value="false" />
+		<property name="cooldown_blocked" value="false" />
+		<property name="waiting_blocked" value="false" />
+		<property name="only_usable_type" value="Name" />
+		<property name="only_usable_by" value="ponkberry" />
+	</action>
+
+	<action name="twitch_reid">
+		<property name="command" value="#reid" />
+		<property name="title" value="DIREWOLF" />
+		<property name="description" value="idk" />
+		<property name="category" value="Special" />
+		<property name="event_name" value="reid" />
+		<property name="default_cost" value="250" />
+		<property name="add_cooldown" value="true" />
+		<property name="cooldown" value="180" />
+		<property name="only_usable_type" value="Name" />
+		<property name="only_usable_by" value="Reid,ponkberry" />
+	</action>
+
+	<action name="twitch_vformation">
+		<property name="command" value="#vformation" />
+		<property name="title" value="CAWWWWWWW but more" />
+		<property name="description" value="idk" />
+		<property name="category" value="Spawns" />
+		<property name="event_name" value="vformation" />
+		<property name="default_cost" value="0" />
+		<property name="ignore_cooldown" value="true" />
+		<property name="add_cooldown" value="false" />
+		<property name="cooldown_blocked" value="false" />
+		<property name="waiting_blocked" value="false" />
+		<property name="only_usable_type" value="Name" />
+		<property name="only_usable_by" value="ponkberry" />
+	</action>
+	
+	<action name="twitch_meteor">
+		<property name="command" value="#meteor" />
+		<property name="title" value="meteor" />
+		<property name="description" value="idk" />
+		<property name="category" value="Spawns" />
+		<property name="event_name" value="meteor" />
+		<property name="default_cost" value="0" />
+		<property name="ignore_cooldown" value="true" />
+		<property name="add_cooldown" value="false" />
+		<property name="cooldown_blocked" value="false" />
+		<property name="waiting_blocked" value="false" />
+		<property name="only_usable_type" value="Name" />
+		<property name="only_usable_by" value="ponkberry" />
+	</action>
+
 	
 	<!-- Supply Drops -->
 	
@@ -1726,7 +1902,77 @@
 		<cooldown_addition name="twitch_buffDeafen" time="90" />
 	</action>
 
-    <!--  -->
+    <!-- Custom Buff Commands -->
+
+    <action name="twitch_buffCute">
+		<property name="command" value="#cute" />
+		<property name="title" value="Silly Sounds" />
+		<property name="category" value="Special" />
+		<property name="event_name" value="buff_cute" />
+		<property name="default_cost" value="-100" />
+		<property name="ignore_cooldown" value="true" />
+		<property name="add_cooldown" value="false" />
+		<property name="cooldown_blocked" value="false" />
+		<property name="waiting_blocked" value="false" />
+		<property name="only_usable_type" value="Name" />
+		<property name="only_usable_by" value="ponkberry,msspenny" />
+	</action>
+
+    <action name="twitch_rigged">
+		<property name="command" value="#rigged" />
+		<property name="category" value="Special" />
+		<property name="event_name" value="action_scare3" />
+		<property name="is_crate" value="true" />
+		<property name="default_cost" value="-100" />
+		<property name="ignore_cooldown" value="true" />
+		<property name="add_cooldown" value="false" />
+		<property name="cooldown_blocked" value="false" />
+		<property name="waiting_blocked" value="false" />
+		<property name="only_usable_type" value="Name" />
+		<property name="only_usable_by" value="ponkberry,msspenny,ObiWannCoyote" />
+	</action>
+
+	<action name="twitch_dictatorship">
+		<property name="command" value="#dictatorship" />
+		<property name="category" value="Special" />
+		<property name="event_name" value="buff_bish" />
+		<property name="is_crate" value="true" />
+		<property name="default_cost" value="-100000" />
+		<property name="ignore_cooldown" value="true" />
+		<property name="add_cooldown" value="false" />
+		<property name="cooldown_blocked" value="false" />
+		<property name="waiting_blocked" value="false" />
+		<property name="only_usable_type" value="Name" />
+		<property name="only_usable_by" value="ponkberry,ObiWannCoyote" />
+	</action>
+
+	<action name="twitch_smite">
+		<property name="command" value="#smite" />
+		<property name="category" value="Special" />
+		<property name="event_name" value="buff_smite" />
+		<property name="default_cost" value="0" />
+		<property name="ignore_cooldown" value="true" />
+		<property name="add_cooldown" value="false" />
+		<property name="cooldown_blocked" value="false" />
+		<property name="waiting_blocked" value="false" />
+		<property name="only_usable_type" value="Name" />
+		<property name="only_usable_by" value="ponkberry" />
+	</action>
+
+	<action name="twitch_buffBish">
+		<property name="command" value="#bish" />
+		<property name="category" value="Special" />
+		<property name="event_name" value="buff_bish" />
+		<property name="default_cost" value="-100" />
+		<property name="ignore_cooldown" value="true" />
+		<property name="add_cooldown" value="false" />
+		<property name="cooldown_blocked" value="false" />
+		<property name="waiting_blocked" value="false" />
+		<property name="only_usable_type" value="Name" />
+		<property name="only_usable_by" value="ponkberry,msspenny" />
+	</action>
+
+	
 	
 	<!-- Mod Commands -->
 	
