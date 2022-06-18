@@ -6813,19 +6813,23 @@ The abrasion healing rate is fastest with a first aid kit, then a medicated band
 			<!-- <passive_effect name="StaminaMaxModifierOT" operation="base_add" value="1"/> -->
 
 			<passive_effect name="StaminaChangeOT" operation="perc_add" value="2" />
+			<triggered_effect trigger="onSelfBuffStart" action="RemoveBuff" buff="buffInjuryBleeding" />
+			<triggered_effect trigger="onSelfBuffFinish" action="RemoveBuff" buff="buffInjuryBleeding" />
+		</effect_group>
 
+		<effect_group>
 			<passive_effect name="WalkSpeed" operation="base_set" value="1.15" />
 			<passive_effect name="RunSpeed" operation="base_set" value="1.5" />
-			<passive_effect name="VehicleVelocityMaxPer" operation="perc_set" value="1.33" />
-			<passive_effect name="VehicleVelocityMaxTurboPer" operation="perc_set" value="1.33" />
+			<passive_effect name="VehicleVelocityMaxPer" operation="perc_set" value="2.00" />
+			<passive_effect name="VehicleVelocityMaxTurboPer" operation="perc_set" value="2.00" />
+		</effect_group>
+		<effect_group>
 			<passive_effect name="EntityDamage" operation="perc_add" value="10">
 				<requirement name="HoldingItemHasTags" tags="melee" />
 			</passive_effect>
 			<passive_effect name="EntityDamage" operation="perc_add" value="10">
 				<requirement name="HoldingItemHasTags" tags="ranged" />
 			</passive_effect>
-			<triggered_effect trigger="onSelfBuffStart" action="RemoveBuff" buff="buffInjuryBleeding" />
-			<triggered_effect trigger="onSelfBuffFinish" action="RemoveBuff" buff="buffInjuryBleeding" />
 		</effect_group>
 	</buff>
 
@@ -7561,14 +7565,14 @@ The abrasion healing rate is fastest with a first aid kit, then a medicated band
 
 	<buff name="twitch_buffNoVehicle" name_key="TwitchBuff_NoVehicle" description_key="TwitchBuff_NoVehicleDesc" icon="ui_game_symbol_twitch_no_vehicle" icon_color="255,175,175">
 		<stack_type value="replace"/>
-		<duration value="120"/>
+		<duration value="60"/>
 		<display_value value=".TwitchNoVehicleTimer"/>
 		<display_value_format value="time"/>
 
 		<effect_group>
 			<passive_effect name="BuffBlink" operation="base_set" value="2" duration="0,3" tags="twitch_buffNoVehicle"/>
-			<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar=".TwitchNoVehicleTimer" operation="set" value="120"/>
-			<triggered_effect trigger="onSelfBuffStack" action="ModifyCVar" cvar=".TwitchNoVehicleTimer" operation="set" value="120"/>
+			<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar=".TwitchNoVehicleTimer" operation="set" value="60"/>
+			<triggered_effect trigger="onSelfBuffStack" action="ModifyCVar" cvar=".TwitchNoVehicleTimer" operation="set" value="60"/>
 			<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar=".TwitchNoVehicleTimer" operation="add" value="-1"/>
 			<triggered_effect trigger="onSelfBuffRemove" action="ModifyCVar" cvar=".TwitchNoVehicleTimer" operation="set" value="0"/>
 			<triggered_effect trigger="onSelfEnteredGame" action="RemoveBuff" buff="twitch_buffNoVehicle"/>

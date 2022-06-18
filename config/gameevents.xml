@@ -740,11 +740,12 @@
 		</action>
 	</action_sequence>
 
-	<!-- Custom Buffs -->
+	<!-- Custom Buff Template -->
 
-	<action_sequence name="buff_bish">
+	<action_sequence name="buff_bish_template">
+		<property name="allow_user_trigger" value="false" />
 		<property name="category" value="twitch_actions" />
-		
+
 		<action class="AddPartyToGroup">
 			<property name="phase" value="0" />
 			<property name="group_name" value="party" />
@@ -759,12 +760,59 @@
 		</action>
 
 		<action class="PlaySound">
-			<property name="phase" value="2" />
-			<property name="sound" value="twitch_regen_buff" param1="buffsound" />
+			<property name="phase" value="1" />
+			<property name="sound" value="minibike_horn" param1="buffsound" />
 			<property name="inside_head" value="true" />
 			<property name="target_group" value="party" />
 			<property name="delay" value="0" param1="buffsounddelay" />
 		</action>
+
+		<action class="AddBuff">
+			<property name="phase" value="1" />
+			<property name="buff_name" value="twitch_buffFast" param1="addbuff1" />
+			<property name="removes_buff" value="twitch_buffSlow" param1="removebuff1" />
+			<property name="target_group" value="party" />
+		</action>
+
+		<action class="AddBuff">
+			<property name="phase" value="1" />
+			<property name="buff_name" value="twitch_buffFast" param1="addbuff2" />
+			<property name="removes_buff" value="twitch_buffSlow" param1="removebuff2" />
+			<property name="target_group" value="party" />
+		</action>
+
+		<action class="AddBuff">
+			<property name="phase" value="1" />
+			<property name="buff_name" value="twitch_buffFast" param1="addbuff3" />
+			<property name="removes_buff" value="twitch_buffSlow" param1="removebuff3" />
+			<property name="target_group" value="party" />
+		</action>
+
+		<action class="AddBuff">
+			<property name="phase" value="1" />
+			<property name="buff_name" value="twitch_buffFast" param1="addbuff4" />
+			<property name="removes_buff" value="twitch_buffSlow" param1="removebuff4" />
+			<property name="target_group" value="party" />
+		</action>
+	</action_sequence>	
+
+	<!-- Custom Buffs -->
+
+	<action_sequence name="buff_bish" template="buff_bish_template">
+		<variable name="buffsound" value="" />
+		<variable name="twitchsound" value="twitch_regen_buff" />
+		<variable name="addbuff1" value="twitch_regen" />
+		<variable name="addbuff2" value="twitch_energize" />
+		<variable name="addbuff3" value="twitch_buffBoostRange" />
+		<variable name="addbuff4" value="twitch_buffBoostMelee" />
+		<variable name="removebuff1" value="twitch_hurt" />
+		<variable name="removebuff2" value="" />
+		<variable name="removebuff3" value="twitch_buffNoRanged" />
+		<variable name="removebuff4" value="twitch_buffNoMelee" />
+	</action_sequence>
+
+	<action_sequence name="buff_bish">
+		<property name="category" value="twitch_actions" />
 
 		<action class="AddBuff">
 			<property name="phase" value="3" />
