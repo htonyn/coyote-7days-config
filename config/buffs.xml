@@ -6777,7 +6777,57 @@ The abrasion healing rate is fastest with a first aid kit, then a medicated band
 	</buff>
 
 	<buff name="buffImpactBracing" hidden="true"> <stack_type value="ignore"/> <duration value="0"/> </buff>
+<!-- Custom Twitch Integration Buffs -->
 
+<buff name="twitch_bish" name_key="TwitchBuff_Bish" icon="ui_game_symbol_twitch_regen" icon_color="175,175,255">
+		<stack_type value="replace" />
+		<duration value="60" />
+		<display_value value=".TwitchBishTimer" />
+		<display_value_format value="time" />
+
+		<effect_group>
+			<passive_effect name="BuffBlink" operation="base_set" value="2" duration="0,3" tags="twitch_bish" />
+			<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar=".TwitchBishTimer" operation="set" value="60" />
+			<triggered_effect trigger="onSelfBuffStack" action="ModifyCVar" cvar=".TwitchBishTimer" operation="set" value="60" />
+			<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar=".TwitchBishTimer" operation="add" value="-1" />
+			<triggered_effect trigger="onSelfBuffRemove" action="ModifyCVar" cvar=".TwitchBishTimer" operation="set" value="0" />
+			<triggered_effect trigger="onSelfEnteredGame" action="RemoveBuff" buff="twitch_bish" />
+
+			<triggered_effect trigger="onSelfBuffUpdate" action="PlaySound" sound="twitch_good_buff_ended" play_in_head="true">
+				<requirement name="CVarCompare" cvar=".TwitchBishTimer" operation="LTE" value="0" />
+			</triggered_effect>
+		</effect_group>
+
+		<effect_group>
+
+			<triggered_effect trigger="onSelfBuffUpdate" action="ModifyStats" stat="Health" operation="add" value="6" />
+			<triggered_effect trigger="onSelfBuffUpdate" action="ModifyStats" stat="Stamina" operation="set" value="500" />
+			<!-- <triggered_effect trigger="onSelfBuffUpdate" action="RemoveAllNegativeBuffs" /> -->
+			<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar="$dysenteryCounter" operation="set" value="0" />
+			<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar="$dysenteryCureCounter" operation="set" value="0" />
+			<triggered_effect trigger="onSelfBuffUpdate" action="RemoveBuff" buff="buffInfectionCatch,buffInfection01Main,buffInjuryBleeding,buffArmorShredding,buffInjuryAbrasion,buffInjuryAbrasionTreated,buffLegSprained,buffLegBroken,buffLegSplinted,buffLegCast,buffArmSprained" />
+			<triggered_effect trigger="onSelfBuffUpdate" action="RemoveBuff" buff="buffArmBroken,buffInjuryStunned01,buffInjuryStunned02,buffInjuryStunned03,buffInjuryCrippled01,buffInjuryKnockdown01,buffInjuryKnockdown01,buffInjuryUnconscious,buffLaceration,buffFatigued" />
+			<triggered_effect trigger="onSelfBuffUpdate" action="RemoveBuff" buff="buffInjuryConcussion,buffShocked,buffBurningElement,buffBurningEnvironment,buffBurningFlamingArrow,buffBurningMolotov,buffBurning" />
+			<triggered_effect trigger="onSelfBuffUpdate" action="RemoveBuff" buff="buffLegSplinted,buffLegCast,buffArmSprained,buffArmBroken,buffArmSplinted,buffArmCast" />
+			<!-- <passive_effect name="HealthMaxModifierOT" operation="base_add" value="1"/> -->
+			<!-- <passive_effect name="StaminaMaxModifierOT" operation="base_add" value="1"/> -->
+
+			<passive_effect name="StaminaChangeOT" operation="perc_add" value="2" />
+
+			<passive_effect name="WalkSpeed" operation="base_set" value="1.15" />
+			<passive_effect name="RunSpeed" operation="base_set" value="1.5" />
+			<passive_effect name="VehicleVelocityMaxPer" operation="perc_set" value="1.33" />
+			<passive_effect name="VehicleVelocityMaxTurboPer" operation="perc_set" value="1.33" />
+			<passive_effect name="EntityDamage" operation="perc_add" value="10">
+				<requirement name="HoldingItemHasTags" tags="melee" />
+			</passive_effect>
+			<passive_effect name="EntityDamage" operation="perc_add" value="10">
+				<requirement name="HoldingItemHasTags" tags="ranged" />
+			</passive_effect>
+			<triggered_effect trigger="onSelfBuffStart" action="RemoveBuff" buff="buffInjuryBleeding" />
+			<triggered_effect trigger="onSelfBuffFinish" action="RemoveBuff" buff="buffInjuryBleeding" />
+		</effect_group>
+	</buff>
 
 <!-- ****************** Twitch Integration Buffs ****************** -->
 
