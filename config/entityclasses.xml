@@ -4650,10 +4650,10 @@ Kinda sorta works but is buggy and we don't have time for that.
 	<property name="LootListOnDeath" value="twitch_crate_test"/>
 </entity_class>
 
-<entity_class name="TwitchAction_Megs" extends="twitch_crate_template">
+<entity_class name="TwitchAction_Meggs" extends="twitch_crate_template">
 	<property name="HideInSpawnMenu" value="true"/>
 	<property name="Mesh" value="#Entities/LootContainers?crate_store_ShamwayPrefab.prefab"/>
-	<property name="LootListOnDeath" value="twitch_crate_megs"/>
+	<property name="LootListOnDeath" value="twitch_crate_meggs"/>
 </entity_class>
 
 <entity_class name="TwitchAction_Custom1" extends="twitch_crate_template">

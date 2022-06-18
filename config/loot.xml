@@ -9515,8 +9515,8 @@ If there is no hit the default quality is used.
 	<item group="groupTreasureMaps"/>
 </lootcontainer>
 
-<lootcontainer id="901" name="twitch_crate_megs" count="1" size="6,2" destroy_on_close="true" sound_open="SupplyDrops/open_supply_crate" sound_close="SupplyDrops/close_supply_crate"  open_time="0.25" loot_quality_template="qualBaseTemplate" ignore_loot_abundance="true">
-	<item group="megs"/>
+<lootcontainer id="901" name="twitch_crate_meggs" count="1" size="6,2" destroy_on_close="true" sound_open="SupplyDrops/open_supply_crate" sound_close="SupplyDrops/close_supply_crate"  open_time="0.25" loot_quality_template="qualBaseTemplate" ignore_loot_abundance="true">
+	<item group="meggs"/>
 </lootcontainer>
 
 <lootcontainer id="902" name="twitch_custom1_crate" count="1" size="6,2" destroy_on_close="true" sound_open="SupplyDrops/open_supply_crate" sound_close="SupplyDrops/close_supply_crate"  open_time="0.25" loot_quality_template="qualBaseTemplate" ignore_loot_abundance="true">
