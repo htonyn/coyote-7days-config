@@ -1279,7 +1279,7 @@
 		<cooldown_addition name="twitch_buffGreyscale" time="60" />
 		<cooldown_addition name="twitch_buffPainting" time="60" />
 		<cooldown_addition name="twitch_buffHeadshotOnly" time="60" />
-	</action> -->
+	</action>
 	
 	<action name="twitch_buffGreyscale">
 		<property name="command" value="#greyscale" />
@@ -1313,7 +1313,7 @@
 		<cooldown_addition name="twitch_buffBlur" time="60" />
 		<cooldown_addition name="twitch_buffGreyscale" time="60" />
 		<cooldown_addition name="twitch_buffHeadshotOnly" time="60" />
-	</action>
+	</action> -->
 	
 	<action name="twitch_buffRegen">
 		<property name="command" value="#regen" />
@@ -1457,10 +1457,10 @@
 		<property name="title_key" value="TwitchAction_BuffNoMelee" />
 		<property name="description_key" value="TwitchAction_BuffNoMeleeDesc" />
 		<property name="category" value="Buffs,Debuffs" />
-		<property name="start_gamestage" value="35" />
+		<property name="start_gamestage" value="100" />
 		<property name="event_name" value="buff_nomelee" />
-		<property name="default_cost" value="100" />
-		<property name="cooldown" value="300" />
+		<property name="default_cost" value="500" />
+		<property name="cooldown" value="3600" />
 		<property name="cooldown_blocked" value="true" />
 		<property name="replaces" value="#weak_melee" />
 		
@@ -1492,10 +1492,10 @@
 		<property name="title_key" value="TwitchAction_BuffNoRange" />
 		<property name="description_key" value="TwitchAction_BuffNoRangeDesc" />
 		<property name="category" value="Buffs,Debuffs" />
-		<property name="start_gamestage" value="35" />
+		<property name="start_gamestage" value="100" />
 		<property name="event_name" value="buff_norange" />
-		<property name="default_cost" value="100" />
-		<property name="cooldown" value="300" />
+		<property name="default_cost" value="1000" />
+		<property name="cooldown" value="3600" />
 		<property name="cooldown_blocked" value="true" />
 		<property name="replaces" value="#weak_range" />
 		
@@ -1515,7 +1515,6 @@
 		<property name="default_cost" value="5000" />
 		<property name="cooldown" value="6000" />
 		<property name="cooldown_blocked" value="true" />
-		
 	</action>
 	
 	<action name="twitch_buffNoExplosives">
@@ -1593,7 +1592,6 @@
 		<cooldown_addition name="twitch_buffWeakenMelee" time="60" />
 		<cooldown_addition name="twitch_buffNoMelee" time="60" />
 		<cooldown_addition name="twitch_buffHeadshotOnly" time="60" />
-		
 	</action>
 	
 	<action name="twitch_buffKeepMoving">
