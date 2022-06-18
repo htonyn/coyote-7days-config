@@ -742,8 +742,6 @@
 
 	<!-- Custom Buffs -->
 
-	
-
 	<action_sequence name="buff_bish">
 		<property name="category" value="twitch_actions" />
 		
