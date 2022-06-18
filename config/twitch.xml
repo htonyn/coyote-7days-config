@@ -1191,7 +1191,7 @@
 		<property name="cooldown" value="600" />
 	</action>
 
-	<action name="twitch_megs" extends="twitch_spawnWeapon1">
+	<action name="twitch_meggs" extends="twitch_spawnWeapon1">
 		<property name="command" value="#meggs" />
 		<property name="start_gamestage" value="10" />
 		<property name="event_name" value="spawn_meggs" />

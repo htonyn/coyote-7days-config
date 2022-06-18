@@ -1223,6 +1223,22 @@
 		<variable name="cratename4" value="TwitchAction_SupplyBooks3" />
 	</action_sequence>
 
+	<action_sequence name="spawn_meggs" template="spawn_crate_template">
+		<variable name="cratename1" value="TwitchAction_Megs" />
+	</action_sequence>
+
+	<action_sequence name="spawn_test" template="spawn_crate_template">
+		<variable name="cratename" value="TwitchAction_CrateTest" />
+	</action_sequence>
+
+	<action_sequence name="spawn_custom1" template="spawn_crate_template">
+		<variable name="cratename" value="TwitchAction_Custom1" />
+	</action_sequence>
+
+	<action_sequence name="spawn_custom2" template="spawn_crate_template">
+		<variable name="cratename" value="TwitchAction_Custom2" />
+	</action_sequence>
+
 	<action_sequence name="spawn_random_knowledge" template="spawn_crate_template">
 		<variable name="cratename" value="TwitchAction_SupplyBooks1,TwitchAction_SupplyBooks2,TwitchAction_SupplyBooks3" />
 	</action_sequence>
