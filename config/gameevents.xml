@@ -811,25 +811,6 @@
 		<variable name="removebuff4" value="twitch_buffNoMelee" />
 	</action_sequence>
 
-	<action_sequence name="buff_bish">
-		<property name="category" value="twitch_actions" />
-
-		<action class="AddBuff">
-			<property name="phase" value="3" />
-			<property name="buff_name" value="twitch_bish" param1="addbuff" />
-			<property name="removes_buff" value="twitch_hurt" param1="removebuff" />
-			<property name="target_group" value="party" />
-		</action>
-
-		<action class="AddItemDurability">
-			<property name="phase" value="4" />
-			<property name="items_location" value="Toolbelt" />
-			<property name="amount" value="0.69" />
-			<property name="is_percent" value="true" />
-			<property name="target_group" value="party" />
-		</action>
-	</action_sequence>
-
 	<action_sequence name="buff_smite">
 		<property name="category" value="twitch_actions" />
 		<requirement class="NearbyEntities">
