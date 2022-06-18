@@ -7168,14 +7168,14 @@ The abrasion healing rate is fastest with a first aid kit, then a medicated band
 
 	<buff name="twitch_buffSlow" name_key="TwitchBuff_Slow" description_key="TwitchBuff_SlowDesc" icon="ui_game_symbol_twitch_slow" icon_color="255,175,175">
 		<stack_type value="replace"/>
-		<duration value="60"/>
+		<duration value="30"/>
 		<display_value value=".TwitchSlowTimer"/>
 		<display_value_format value="time"/>
 
 		<effect_group>
 			<passive_effect name="BuffBlink" operation="base_set" value="2" duration="0,3" tags="twitch_buffSlow"/>
-			<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar=".TwitchSlowTimer" operation="set" value="60"/>
-			<triggered_effect trigger="onSelfBuffStack" action="ModifyCVar" cvar=".TwitchSlowTimer" operation="set" value="60"/>
+			<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar=".TwitchSlowTimer" operation="set" value="30"/>
+			<triggered_effect trigger="onSelfBuffStack" action="ModifyCVar" cvar=".TwitchSlowTimer" operation="set" value="30"/>
 			<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar=".TwitchSlowTimer" operation="add" value="-1"/>
 			<triggered_effect trigger="onSelfBuffRemove" action="ModifyCVar" cvar=".TwitchSlowTimer" operation="set" value="0"/>
 			<triggered_effect trigger="onSelfEnteredGame" action="RemoveBuff" buff="twitch_buffSlow"/>
