@@ -1337,7 +1337,7 @@
 	</action_sequence>
 
 	<action_sequence name="spawn_meggs" template="spawn_crate_template">
-		<variable name="cratename1" value="TwitchAction_Meggs" />
+		<variable name="cratename" value="TwitchAction_Meggs" />
 	</action_sequence>
 
 	<action_sequence name="spawn_test" template="spawn_crate_template">

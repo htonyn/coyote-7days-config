@@ -8533,7 +8533,6 @@ If there is no hit the default quality is used.
 	<item name="foodEgg" count="1,2"/>
 </lootgroup>
 
-
 <!-- *** LOOT_LISTS -->
 
 <!-- empty, storage containers the player crafts, cntSecureStorageChest-->
