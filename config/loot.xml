@@ -9510,20 +9510,20 @@ If there is no hit the default quality is used.
 	<item group="twitch_T4_Rewards"/>
 </lootcontainer>
 
-<lootcontainer id="900" name="twitch_crate_test" count="1" size="6,2" destroy_on_close="true" sound_open="SupplyDrops/open_supply_crate" sound_close="SupplyDrops/close_supply_crate"  open_time="0.25" loot_quality_template="qualBaseTemplate" ignore_loot_abundance="true">
+<lootcontainer id="800" name="twitch_crate_test" count="1" size="6,2" destroy_on_close="true" sound_open="SupplyDrops/open_supply_crate" sound_close="SupplyDrops/close_supply_crate"  open_time="0.25" loot_quality_template="qualBaseTemplate" ignore_loot_abundance="true">
 	<item group="twitch_T4_Rewards"/>
 	<item group="groupTreasureMaps"/>
 </lootcontainer>
 
-<lootcontainer id="901" name="twitch_crate_meggs" count="1" size="6,2" destroy_on_close="true" sound_open="SupplyDrops/open_supply_crate" sound_close="SupplyDrops/close_supply_crate"  open_time="0.25" loot_quality_template="qualBaseTemplate" ignore_loot_abundance="true">
+<lootcontainer id="801" name="twitch_crate_meggs" count="1" size="6,2" destroy_on_close="true" sound_open="SupplyDrops/open_supply_crate" sound_close="SupplyDrops/close_supply_crate"  open_time="0.25" loot_quality_template="qualBaseTemplate" ignore_loot_abundance="true">
 	<item group="meggs"/>
 </lootcontainer>
 
-<lootcontainer id="902" name="twitch_custom1_crate" count="1" size="6,2" destroy_on_close="true" sound_open="SupplyDrops/open_supply_crate" sound_close="SupplyDrops/close_supply_crate"  open_time="0.25" loot_quality_template="qualBaseTemplate" ignore_loot_abundance="true">
+<lootcontainer id="802" name="twitch_custom1_crate" count="1" size="6,2" destroy_on_close="true" sound_open="SupplyDrops/open_supply_crate" sound_close="SupplyDrops/close_supply_crate"  open_time="0.25" loot_quality_template="qualBaseTemplate" ignore_loot_abundance="true">
 	<item group="twitch_custom1_crate"/>
 </lootcontainer>
 
-<lootcontainer id="903" name="twitch_custom2_crate" count="1" size="6,2" destroy_on_close="true" sound_open="SupplyDrops/open_supply_crate" sound_close="SupplyDrops/close_supply_crate"  open_time="0.25" loot_quality_template="qualBaseTemplate" ignore_loot_abundance="true">
+<lootcontainer id="803" name="twitch_custom2_crate" count="1" size="6,2" destroy_on_close="true" sound_open="SupplyDrops/open_supply_crate" sound_close="SupplyDrops/close_supply_crate"  open_time="0.25" loot_quality_template="qualBaseTemplate" ignore_loot_abundance="true">
 	<item group="twitch_custom2_crate"/>
 </lootcontainer>
 
