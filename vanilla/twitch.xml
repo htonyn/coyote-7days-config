@@ -15,7 +15,7 @@
 	
 -->
 
-<twitch party_kill_reward_max="250" chat_activity_time="150" nonsub_pp_cap="1000" sub_pp_cap="5000"
+<twitch party_kill_reward_max="250" chat_activity_time="300" nonsub_pp_cap="1000" sub_pp_cap="2000"
 	denied_crate_event="action_cratedenied" stealing_crate_event="action_cratesteal" party_respawn_event="buff_respawn" on_death_event="action_ondeath">
 
 	<!-- Categories must be defined at the top. Must at least have one. Safe bet you should probably keep "Commands" in there and at the top. -->
@@ -46,7 +46,7 @@
 		only_usable_by - If "Name" is defined for only_usable_type then this is a comma delimted list of names that can use it.
 		random_group - Random groups are defined below the action list. This groups actions into random group lists and randomly picks a defined number of
 			these actions to show per day.
-		replaces - Replaces the defined command (ie. #normal) with this action if its available.
+		replaces - Replaces the defined command (ie. #spawn_normal) with this action if its available.
 		show_in_action_list - If this action should show in the Twitch Info UI in the action list.
 		single_day - This action can only be used once per day.
 		special_only - Can only use special points for this action.
@@ -62,11 +62,10 @@
 		name - name of the action you are adding cooldown to.
 		time - amount of cooldown being added.
 	-->
-
-    <!-- Spawn Enemies -->
 	
 	<action name="twitch_normalZombie">
-		<property name="command" value="#normal" />
+		<property name="command" value="#spawn_normal" />
+		<property name="command_key" value="TwitchAction_SpawnNormalCommand" />
 		<property name="title_key" value="TwitchAction_SpawnNormal" />
 		<property name="category" value="Spawns" />
 		<property name="event_name" value="spawn_standard" />
@@ -103,7 +102,8 @@
 	
 	<action name="twitch_crawlerZombie" extends="twitch_normalZombie">
 		<property name="start_gamestage" value="2" />
-		<property name="command" value="#crawler" />
+		<property name="command" value="#spawn_crawler" />
+		<property name="command_key" value="TwitchAction_SpawnCrawlerCommand" />
 		<property name="title_key" value="TwitchAction_SpawnCrawler" />
 		<property name="description_key" value="TwitchAction_SpawnCrawlerDesc" />
 		<property name="event_name" value="spawn_crawler" />
@@ -112,7 +112,8 @@
 	</action>
 	
 	<action name="twitch_spiderZombie" extends="twitch_toughZombie">
-		<property name="command" value="#spider" />
+		<property name="command" value="#spawn_spider" />
+		<property name="command_key" value="TwitchAction_SpawnSpiderCommand" />
 		<property name="title_key" value="TwitchAction_SpawnSpider" />
 		<property name="description_key" value="TwitchAction_SpawnSpiderDesc" />
 		<property name="event_name" value="spawn_spider" />
@@ -120,7 +121,8 @@
 	</action>
 	
 	<action name="twitch_spiderZombieFeral" extends="twitch_toughFeralZombie">
-		<property name="command" value="#spider" />
+		<property name="command" value="#spawn_spider" />
+		<property name="command_key" value="TwitchAction_SpawnSpiderCommand" />
 		<property name="title_key" value="TwitchAction_SpawnSpiderFeral" />
 		<property name="description_key" value="TwitchAction_SpawnSpiderFeralDesc" />
 		<property name="event_name" value="spawn_spider_feral" />
@@ -128,7 +130,8 @@
 	</action>
 	
 	<action name="twitch_spiderZombieRad" extends="twitch_toughRadZombie">
-		<property name="command" value="#spider" />
+		<property name="command" value="#spawn_spider" />
+		<property name="command_key" value="TwitchAction_SpawnSpiderCommand" />
 		<property name="title_key" value="TwitchAction_SpawnSpiderRad" />
 		<property name="description_key" value="TwitchAction_SpawnSpiderRadDesc" />
 		<property name="event_name" value="spawn_spider_rad" />
@@ -136,7 +139,8 @@
 	</action>
 	
 	<action name="twitch_bikerZombie" extends="twitch_toughZombie">
-		<property name="command" value="#biker" />
+		<property name="command" value="#spawn_biker" />
+		<property name="command_key" value="TwitchAction_SpawnBikerCommand" />
 		<property name="title_key" value="TwitchAction_SpawnBiker" />
 		<property name="description_key" value="TwitchAction_SpawnBikerDesc" />
 		<property name="event_name" value="spawn_biker" />
@@ -144,7 +148,8 @@
 	</action>
 	
 	<action name="twitch_bikerZombieFeral" extends="twitch_toughFeralZombie">
-		<property name="command" value="#biker" />
+		<property name="command" value="#spawn_biker" />
+		<property name="command_key" value="TwitchAction_SpawnBikerCommand" />
 		<property name="title_key" value="TwitchAction_SpawnBikerFeral" />
 		<property name="description_key" value="TwitchAction_SpawnBikerFeralDesc" />
 		<property name="event_name" value="spawn_biker_feral" />
@@ -152,7 +157,8 @@
 	</action>
 	
 	<action name="twitch_bikerZombieRad" extends="twitch_toughRadZombie">
-		<property name="command" value="#biker" />
+		<property name="command" value="#spawn_biker" />
+		<property name="command_key" value="TwitchAction_SpawnBikerCommand" />
 		<property name="title_key" value="TwitchAction_SpawnBikerRad" />
 		<property name="description_key" value="TwitchAction_SpawnBikerRadDesc" />
 		<property name="event_name" value="spawn_biker_rad" />
@@ -160,7 +166,8 @@
 	</action>
 	
 	<action name="twitch_soldierZombie" extends="twitch_toughZombie">
-		<property name="command" value="#soldier" />
+		<property name="command" value="#spawn_soldier" />
+		<property name="command_key" value="TwitchAction_SpawnSoldierCommand" />
 		<property name="title_key" value="TwitchAction_SpawnSoldier" />
 		<property name="description_key" value="TwitchAction_SpawnSoldierDesc" />
 		<property name="event_name" value="spawn_soldier" />
@@ -168,7 +175,8 @@
 	</action>
 	
 	<action name="twitch_soldierZombieFeral" extends="twitch_toughFeralZombie">
-		<property name="command" value="#soldier" />
+		<property name="command" value="#spawn_soldier" />
+		<property name="command_key" value="TwitchAction_SpawnSoldierCommand" />
 		<property name="title_key" value="TwitchAction_SpawnSoldierFeral" />
 		<property name="description_key" value="TwitchAction_SpawnSoldierFeralDesc" />
 		<property name="event_name" value="spawn_soldier_feral" />
@@ -176,7 +184,8 @@
 	</action>
 	
 	<action name="twitch_soldierZombieRad" extends="twitch_toughRadZombie">
-		<property name="command" value="#soldier" />
+		<property name="command" value="#spawn_soldier" />
+		<property name="command_key" value="TwitchAction_SpawnSoldierCommand" />
 		<property name="title_key" value="TwitchAction_SpawnSoldierRad" />
 		<property name="description_key" value="TwitchAction_SpawnSoldierRadDesc" />
 		<property name="event_name" value="spawn_soldier_rad" />
@@ -184,7 +193,8 @@
 	</action>
 	
 	<action name="twitch_mamaZombie" extends="twitch_toughZombie">
-		<property name="command" value="#mama" />
+		<property name="command" value="#spawn_mama" />
+		<property name="command_key" value="TwitchAction_SpawnHungryCommand" />
 		<property name="title_key" value="TwitchAction_SpawnHungry" />
 		<property name="description_key" value="TwitchAction_SpawnHungryDesc" />
 		<property name="event_name" value="spawn_mama" />
@@ -193,7 +203,8 @@
 	</action>
 	
 	<action name="twitch_mamaZombieFeral" extends="twitch_toughFeralZombie">
-		<property name="command" value="#mama" />
+		<property name="command" value="#spawn_mama" />
+		<property name="command_key" value="TwitchAction_SpawnHungryCommand" />
 		<property name="title_key" value="TwitchAction_SpawnHungryFeral" />
 		<property name="description_key" value="TwitchAction_SpawnHungryFeralDesc" />
 		<property name="event_name" value="spawn_mama_feral" />
@@ -201,7 +212,8 @@
 	</action>
 	
 	<action name="twitch_mamaZombieRad" extends="twitch_toughRadZombie">
-		<property name="command" value="#mama" />
+		<property name="command" value="#spawn_mama" />
+		<property name="command_key" value="TwitchAction_SpawnHungryCommand" />
 		<property name="title_key" value="TwitchAction_SpawnHungryRad" />
 		<property name="description_key" value="TwitchAction_SpawnHungryRadDesc" />
 		<property name="event_name" value="spawn_mama_rad" />
@@ -209,7 +221,7 @@
 	</action>
 	
 	<action name="twitch_touristZombie" extends="twitch_toughZombie">
-		<property name="command" value="#tourist" />
+		<property name="command" value="#spawn_tourist" />
 		<property name="title_key" value="TwitchAction_SpawnTourist" />
 		<property name="description_key" value="TwitchAction_SpawnTouristDesc" />
 		<property name="event_name" value="spawn_tourist" />
@@ -217,7 +229,7 @@
 	</action>
 	
 	<action name="twitch_touristZombieFeral" extends="twitch_toughFeralZombie">
-		<property name="command" value="#tourist" />
+		<property name="command" value="#spawn_tourist" />
 		<property name="title_key" value="TwitchAction_SpawnTouristFeral" />
 		<property name="description_key" value="TwitchAction_SpawnTouristFeralDesc" />
 		<property name="event_name" value="spawn_tourist_feral" />
@@ -225,7 +237,7 @@
 	</action>
 	
 	<action name="twitch_touristZombieRad" extends="twitch_toughRadZombie">
-		<property name="command" value="#tourist" />
+		<property name="command" value="#spawn_tourist" />
 		<property name="title_key" value="TwitchAction_SpawnTouristRad" />
 		<property name="description_key" value="TwitchAction_SpawnTouristRadDesc" />
 		<property name="event_name" value="spawn_tourist_rad" />
@@ -240,7 +252,8 @@
 	</action>
 	
 	<action name="twitch_cop" extends="twitch_boomZombie">
-		<property name="command" value="#cop" />
+		<property name="command" value="#spawn_cop" />
+		<property name="command_key" value="TwitchAction_SpawnCopCommand" />
 		<property name="title_key" value="TwitchAction_SpawnCop" />
 		<property name="description_key" value="TwitchAction_SpawnCopDesc" />
 		<property name="event_name" value="spawn_cop" />
@@ -250,7 +263,8 @@
 	</action>
 	
 	<action name="twitch_feralcop" extends="twitch_boomZombie">
-		<property name="command" value="#cop" />
+		<property name="command" value="#spawn_cop" />
+		<property name="command_key" value="TwitchAction_SpawnCopCommand" />
 		<property name="title_key" value="TwitchAction_SpawnCopFeral" />
 		<property name="description_key" value="TwitchAction_SpawnCopFeralDesc" />
 		<property name="start_gamestage" value="85" />
@@ -261,7 +275,8 @@
 	</action>
 	
 	<action name="twitch_radcop" extends="twitch_boomZombie">
-		<property name="command" value="#cop" />
+		<property name="command" value="#spawn_cop" />
+		<property name="command_key" value="TwitchAction_SpawnCopCommand" />
 		<property name="title_key" value="TwitchAction_SpawnCopRad" />
 		<property name="description_key" value="TwitchAction_SpawnCopRadDesc" />
 		<property name="start_gamestage" value="145" />
@@ -272,7 +287,8 @@
 	</action>
 	
 	<action name="twitch_mutated" extends="twitch_boomZombie">
-		<property name="command" value="#mutated" />
+		<property name="command" value="#spawn_mutated" />
+		<property name="command_key" value="TwitchAction_SpawnMutatedCommand" />
 		<property name="title_key" value="TwitchAction_SpawnMutated" />
 		<property name="description_key" value="TwitchAction_SpawnMutatedDesc" />
 		<property name="event_name" value="spawn_mutated" />
@@ -282,7 +298,7 @@
 	</action>
 	
 	<action name="twitch_mutatedFeral" extends="twitch_mutated">
-		<property name="command" value="#mutated" />
+		<property name="command" value="#spawn_mutated" />
 		<property name="title_key" value="TwitchAction_SpawnMutatedFeral" />
 		<property name="description_key" value="TwitchAction_SpawnMutatedFeralDesc" />
 		<property name="start_gamestage" value="125" />
@@ -292,7 +308,7 @@
 	</action>
 	
 	<action name="twitch_mutatedRad" extends="twitch_mutatedFeral">
-		<property name="command" value="#mutated" />
+		<property name="command" value="#spawn_mutated" />
 		<property name="title_key" value="TwitchAction_SpawnMutatedRad" />
 		<property name="description_key" value="TwitchAction_SpawnMutatedRadDesc" />
 		<property name="start_gamestage" value="145" />
@@ -301,18 +317,20 @@
 	</action>
 	
 	<action name="twitch_demo" extends="twitch_boomZombie">
-		<property name="command" value="#demo" />
+		<property name="command" value="#spawn_demo" />
+		<property name="command_key" value="TwitchAction_SpawnDemoCommand" />
 		<property name="title_key" value="TwitchAction_SpawnDemo" />
 		<property name="description_key" value="TwitchAction_SpawnDemoDesc" />
-		<property name="start_gamestage" value="125" />
+		<property name="start_gamestage" value="70" />
 		<property name="event_name" value="spawn_demo" />
-		<property name="default_cost" value="1000" />
-		<property name="cooldown" value="600" />
+		<property name="default_cost" value="150" />
+		<property name="cooldown" value="30" />
 		<property name="enabled" value="true" />
 	</action>
 	
 	<action name="twitch_snake" extends="twitch_normalZombie">
-		<property name="command" value="#snake" />
+		<property name="command" value="#spawn_snake" />
+		<property name="command_key" value="TwitchAction_SpawnSnakeCommand" />
 		<property name="title_key" value="TwitchAction_SpawnSnake" />
 		<property name="description_key" value="TwitchAction_SpawnSnakeDesc" />
 		<property name="start_gamestage" value="3" />
@@ -323,7 +341,8 @@
 	</action>
 	
 	<action name="twitch_coyote" extends="twitch_normalZombie">
-		<property name="command" value="#dion" />
+		<property name="command" value="#spawn_coyote" />
+		<property name="command_key" value="TwitchAction_SpawnCoyoteCommand" />
 		<property name="title_key" value="TwitchAction_SpawnCoyote" />
 		<property name="description_key" value="TwitchAction_SpawnCoyoteDesc" />
 		<property name="start_gamestage" value="5" />
@@ -334,7 +353,8 @@
 	</action>
 	
 	<action name="twitch_vulture" extends="twitch_normalZombie">
-		<property name="command" value="#vulture" />
+		<property name="command" value="#spawn_vulture" />
+		<property name="command_key" value="TwitchAction_SpawnVultureCommand" />
 		<property name="title_key" value="TwitchAction_SpawnVulture" />
 		<property name="description_key" value="TwitchAction_SpawnVultureDesc" />
 		<property name="start_gamestage" value="8" />
@@ -345,7 +365,8 @@
 	</action>
 	
 	<action name="twitch_boar" extends="twitch_normalZombie">
-		<property name="command" value="#boar" />
+		<property name="command" value="#spawn_boar" />
+		<property name="command_key" value="TwitchAction_SpawnBoarCommand" />
 		<property name="title_key" value="TwitchAction_SpawnBoar" />
 		<property name="description_key" value="TwitchAction_SpawnBoarDesc" />
 		<property name="start_gamestage" value="35" />
@@ -356,7 +377,8 @@
 	</action>
 	
 	<action name="twitch_dog" extends="twitch_normalZombie">
-		<property name="command" value="#dog" />
+		<property name="command" value="#spawn_dog" />
+		<property name="command_key" value="TwitchAction_SpawnDogCommand" />
 		<property name="title_key" value="TwitchAction_SpawnDog" />
 		<property name="description_key" value="TwitchAction_SpawnDogDesc" />
 		<property name="start_gamestage" value="20" />
@@ -367,7 +389,8 @@
 	</action>
 	
 	<action name="twitch_lion" extends="twitch_normalZombie">
-		<property name="command" value="#lion" />
+		<property name="command" value="#spawn_lion" />
+		<property name="command_key" value="TwitchAction_SpawnLionCommand" />
 		<property name="title_key" value="TwitchAction_SpawnLion" />
 		<property name="description_key" value="TwitchAction_SpawnLionDesc" />
 		<property name="start_gamestage" value="65" />
@@ -378,7 +401,8 @@
 	</action>
 	
 	<action name="twitch_wolf" extends="twitch_normalZombie">
-		<property name="command" value="#wolf" />
+		<property name="command" value="#spawn_wolf" />
+		<property name="command_key" value="TwitchAction_SpawnWolfCommand" />
 		<property name="title_key" value="TwitchAction_SpawnWolf" />
 		<property name="description_key" value="TwitchAction_SpawnWolfDesc" />
 		<property name="start_gamestage" value="25" />
@@ -389,7 +413,8 @@
 	</action>
 	
 	<action name="twitch_direwolf" extends="twitch_normalZombie">
-		<property name="command" value="#direwolf" />
+		<property name="command" value="#spawn_direwolf" />
+		<property name="command_key" value="TwitchAction_SpawnDireWolfCommand" />
 		<property name="title_key" value="TwitchAction_SpawnDireWolf" />
 		<property name="description_key" value="TwitchAction_SpawnDireWolfDesc" />
 		<property name="start_gamestage" value="55" />
@@ -400,10 +425,11 @@
 	</action>
 	
 	<action name="twitch_bear" extends="twitch_normalZombie">
-		<property name="command" value="#bear" />
+		<property name="command" value="#spawn_bear" />
+		<property name="command_key" value="TwitchAction_SpawnBearCommand" />
 		<property name="title_key" value="TwitchAction_SpawnBear" />
 		<property name="description_key" value="TwitchAction_SpawnBearDesc" />
-		<property name="start_gamestage" value="125" />
+		<property name="start_gamestage" value="80" />
 		<property name="event_name" value="spawn_bear" />
 		<property name="special_only" value="false" />
 		<property name="default_cost" value="175" />
@@ -411,10 +437,11 @@
 	</action>
 	
 	<action name="twitch_zombiebear" extends="twitch_normalZombie">
-		<property name="command" value="#bear" />
+		<property name="command" value="#spawn_bear" />
+		<property name="command_key" value="TwitchAction_SpawnBearCommand" />
 		<property name="title_key" value="TwitchAction_SpawnZombieBear" />
 		<property name="description_key" value="TwitchAction_SpawnZombieBearDesc" />
-		<property name="start_gamestage" value="175" />
+		<property name="start_gamestage" value="110" />
 		<property name="event_name" value="spawn_zombiebear" />
 		<property name="special_only" value="false" />
 		<property name="default_cost" value="200" />
@@ -422,7 +449,8 @@
 	</action>
 	
 	<action name="twitch_radvulture" extends="twitch_normalZombie">
-		<property name="command" value="#radvulture" />
+		<property name="command" value="#spawn_radvulture" />
+		<property name="command_key" value="TwitchAction_SpawnVultureRadCommand" />
 		<property name="title_key" value="TwitchAction_SpawnVultureRad" />
 		<property name="description_key" value="TwitchAction_SpawnVultureRadDesc" />
 		<property name="start_gamestage" value="130" />
@@ -432,7 +460,8 @@
 	</action>
 	
 	<action name="twitch_wightZombie" extends="twitch_normalZombie">
-		<property name="command" value="#wight" />
+		<property name="command" value="#spawn_wight" />
+		<property name="command_key" value="TwitchAction_SpawnWightCommand" />
 		<property name="title_key" value="TwitchAction_SpawnWight" />
 		<property name="description_key" value="TwitchAction_SpawnWightDesc" />
 		<property name="start_gamestage" value="75" />
@@ -441,7 +470,8 @@
 	</action>
 	
 	<action name="twitch_radwightZombie" extends="twitch_normalZombie">
-		<property name="command" value="#wight" />
+		<property name="command" value="#spawn_wight" />
+		<property name="command_key" value="TwitchAction_SpawnWightCommand" />
 		<property name="title_key" value="TwitchAction_SpawnWightRad" />
 		<property name="description_key" value="TwitchAction_SpawnWightRadDesc" />
 		<property name="start_gamestage" value="130" />
@@ -450,7 +480,8 @@
 	</action>
 	
 	<action name="twitch_feralZombie" extends="twitch_normalZombie">
-		<property name="command" value="#feral" />
+		<property name="command" value="#spawn_feral" />
+		<property name="command_key" value="TwitchAction_SpawnFeralCommand" />
 		<property name="title_key" value="TwitchAction_SpawnFeral" />
 		<property name="description_key" value="TwitchAction_SpawnFeralDesc" />
 		<property name="start_gamestage" value="50" />
@@ -459,194 +490,20 @@
 	</action>
 	
 	<action name="twitch_radZombie" extends="twitch_normalZombie">
-		<property name="command" value="#rad" />
+		<property name="command" value="#spawn_rad" />
+		<property name="command_key" value="TwitchAction_SpawnRadCommand" />
 		<property name="title_key" value="TwitchAction_SpawnRad" />
 		<property name="description_key" value="TwitchAction_SpawnRadDesc" />
 		<property name="start_gamestage" value="90" />
 		<property name="event_name" value="spawn_rad" />
 		<property name="default_cost" value="75" />
 	</action>
-
-    <!-- Custom Spawn Enemies -->
-
-    <action name="twitch_horde">
-		<property name="command" value="#horde" />
-		<property name="title" value="Small Horde" />
-		<property name="description" value="idk" />
-		<property name="category" value="Spawns" />
-		<property name="event_name" value="horde" />
-		<property name="default_cost" value="500" />
-		<property name="add_cooldown" value="true" />
-		<property name="cooldown_blocked" value="true" />
-		<property name="waiting_blocked" value="true" />
-        <property name="start_gamestage" value="75" />
-		<property name="cooldown" value="180" />
-	</action>
-
-	<action name="twitch_dionandfriends">
-		<property name="command" value="#dionandfriends" />
-		<property name="title" value="Dion and his Friends" />
-		<property name="description" value="idk" />
-		<property name="category" value="Spawns" />
-		<property name="event_name" value="dionandfriends" />
-		<property name="default_cost" value="700" />
-		<property name="add_cooldown" value="true" />
-		<property name="cooldown_blocked" value="true" />
-		<property name="waiting_blocked" value="true" />
-        <property name="start_gamestage" value="175" />
-		<property name="cooldown" value="180" />
-	</action>
-
-	<action name="twitch_cacaw">
-		<property name="command" value="#cacaw" />
-		<property name="title" value="CAWWWWWWW" />
-		<property name="description" value="idk" />
-		<property name="category" value="Spawns" />
-		<property name="event_name" value="cacaw" />
-		<property name="default_cost" value="750" />
-		<property name="add_cooldown" value="true" />
-		<property name="cooldown_blocked" value="true" />
-		<property name="waiting_blocked" value="true" />
-        <property name="start_gamestage" value="175" />
-		<property name="cooldown" value="180" />
-	</action>
-
-	<action name="twitch_coypack">
-		<property name="command" value="#coypack" />
-		<property name="title" value="woof" />
-		<property name="description" value="idk" />
-		<property name="category" value="Spawns" />
-		<property name="event_name" value="coypack" />
-		<property name="default_cost" value="750" />
-		<property name="add_cooldown" value="true" />
-		<property name="cooldown_blocked" value="true" />
-		<property name="waiting_blocked" value="true" />
-        <property name="start_gamestage" value="100" />
-		<property name="cooldown" value="180" />
-	</action>
-
-	<action name="twitch_screamer">
-		<property name="command" value="#christina" />
-		<property name="title" value="AHHHHHHHH" />
-		<property name="description" value="idk" />
-		<property name="category" value="Spawns" />
-		<property name="event_name" value="spawn_screamer" />
-		<property name="default_cost" value="0" />
-		<property name="ignore_cooldown" value="true" />
-		<property name="add_cooldown" value="false" />
-		<property name="cooldown_blocked" value="false" />
-		<property name="waiting_blocked" value="false" />
-		<property name="only_usable_type" value="Name" />
-		<property name="only_usable_by" value="ponkberry" />
-	</action>
-
-	<action name="twitch_grace">
-		<property name="command" value="#grace" />
-		<property name="title" value="AHHHHHHHH" />
-		<property name="description" value="idk" />
-		<property name="category" value="Spawns" />
-		<property name="event_name" value="spawn_grace" />
-		<property name="default_cost" value="400" />
-		<property name="add_cooldown" value="true" />
-		<property name="cooldown_blocked" value="true" />
-		<property name="waiting_blocked" value="true" />
-        <property name="start_gamestage" value="50" />
-		<property name="cooldown" value="180" />
-	</action>
-
-	<action name="twitch_horder">
-		<property name="command" value="#horder" />
-		<property name="title" value="Less Small Horde" />
-		<property name="description" value="idk" />
-		<property name="category" value="Spawns" />
-		<property name="event_name" value="horder" />
-		<property name="default_cost" value="0" />
-		<property name="ignore_cooldown" value="true" />
-		<property name="add_cooldown" value="false" />
-		<property name="cooldown_blocked" value="false" />
-		<property name="waiting_blocked" value="false" />
-		<property name="only_usable_type" value="Name" />
-		<property name="only_usable_by" value="ponkberry" />
-	</action>
-
-	<action name="twitch_cock">
-		<property name="command" value="#cock" />
-		<property name="title" value="cock" />
-		<property name="description" value="idk" />
-		<property name="category" value="Spawns" />
-		<property name="event_name" value="cock" />
-		<property name="default_cost" value="0" />
-		<property name="ignore_cooldown" value="true" />
-		<property name="add_cooldown" value="false" />
-		<property name="cooldown_blocked" value="false" />
-		<property name="waiting_blocked" value="false" />
-		<property name="only_usable_type" value="Name" />
-		<property name="only_usable_by" value="ponkberry" />
-	</action>
-
-	<action name="twitch_frendz">
-		<property name="command" value="#frendz" />
-		<property name="title" value="frendz" />
-		<property name="description" value="idk" />
-		<property name="category" value="Spawns" />
-		<property name="event_name" value="frendz" />
-		<property name="default_cost" value="0" />
-		<property name="ignore_cooldown" value="true" />
-		<property name="add_cooldown" value="false" />
-		<property name="cooldown_blocked" value="false" />
-		<property name="waiting_blocked" value="false" />
-		<property name="only_usable_type" value="Name" />
-		<property name="only_usable_by" value="ponkberry" />
-	</action>
-
-	<action name="twitch_reid">
-		<property name="command" value="#reid" />
-		<property name="title" value="DIREWOLF" />
-		<property name="description" value="idk" />
-		<property name="category" value="Special" />
-		<property name="event_name" value="reid" />
-		<property name="default_cost" value="250" />
-		<property name="add_cooldown" value="true" />
-		<property name="cooldown" value="180" />
-		<property name="only_usable_type" value="Name" />
-		<property name="only_usable_by" value="Reid,ponkberry" />
-	</action>
-
-	<action name="twitch_vformation">
-		<property name="command" value="#vformation" />
-		<property name="title" value="CAWWWWWWW but more" />
-		<property name="description" value="idk" />
-		<property name="category" value="Spawns" />
-		<property name="event_name" value="vformation" />
-		<property name="default_cost" value="0" />
-		<property name="ignore_cooldown" value="true" />
-		<property name="add_cooldown" value="false" />
-		<property name="cooldown_blocked" value="false" />
-		<property name="waiting_blocked" value="false" />
-		<property name="only_usable_type" value="Name" />
-		<property name="only_usable_by" value="ponkberry" />
-	</action>
-	
-	<action name="twitch_meteor">
-		<property name="command" value="#meteor" />
-		<property name="title" value="meteor" />
-		<property name="description" value="idk" />
-		<property name="category" value="Spawns" />
-		<property name="event_name" value="meteor" />
-		<property name="default_cost" value="0" />
-		<property name="ignore_cooldown" value="true" />
-		<property name="add_cooldown" value="false" />
-		<property name="cooldown_blocked" value="false" />
-		<property name="waiting_blocked" value="false" />
-		<property name="only_usable_type" value="Name" />
-		<property name="only_usable_by" value="ponkberry" />
-	</action>
-
 	
 	<!-- Supply Drops -->
 	
 	<action name="twitch_spawnWeapon1">
-		<property name="command" value="#weapon" />
+		<property name="command" value="#supply_weapon" />
+		<property name="command_key" value="TwitchAction_SupplyWeaponCommand" />
 		<property name="title_key" value="TwitchAction_SupplyWeapon1" />
 		<property name="description_key" value="TwitchAction_SupplyWeapon1Desc" />
 		<property name="category" value="Spawns,Supplies" />
@@ -658,7 +515,8 @@
 	</action>
 	
 	<action name="twitch_spawnWeapon2" extends="twitch_spawnWeapon1">
-		<property name="command" value="#weapon" />
+		<property name="command" value="#supply_weapon" />
+		<property name="command_key" value="TwitchAction_SupplyWeaponCommand" />
 		<property name="title_key" value="TwitchAction_SupplyWeapon2" />
 		<property name="description_key" value="TwitchAction_SupplyWeapon2Desc" />
 		<property name="start_gamestage" value="10" />
@@ -668,7 +526,8 @@
 	</action>
 	
 	<action name="twitch_spawnWeapon3" extends="twitch_spawnWeapon1">
-		<property name="command" value="#weapon" />
+		<property name="command" value="#supply_weapon" />
+		<property name="command_key" value="TwitchAction_SupplyWeaponCommand" />
 		<property name="title_key" value="TwitchAction_SupplyWeapon3" />
 		<property name="description_key" value="TwitchAction_SupplyWeapon3Desc" />
 		<property name="start_gamestage" value="50" />
@@ -678,7 +537,8 @@
 	</action>
 	
 	<action name="twitch_spawnWeapon4" extends="twitch_spawnWeapon1">
-		<property name="command" value="#weapon" />
+		<property name="command" value="#supply_weapon" />
+		<property name="command_key" value="TwitchAction_SupplyWeaponCommand" />
 		<property name="title_key" value="TwitchAction_SupplyWeapon4" />
 		<property name="description_key" value="TwitchAction_SupplyWeapon4Desc" />
 		<property name="start_gamestage" value="90" />
@@ -688,7 +548,8 @@
 	</action>
 	
 	<action name="twitch_spawnArmor0" extends="twitch_spawnWeapon1">
-		<property name="command" value="#armor" />
+		<property name="command" value="#supply_armor" />
+		<property name="command_key" value="TwitchAction_SupplyArmorCommand" />
 		<property name="title_key" value="TwitchAction_SupplyArmor1" />
 		<property name="description_key" value="TwitchAction_SupplyArmor1Desc" />
 		<property name="event_name" value="spawn_armor0" />
@@ -697,7 +558,8 @@
 	</action>
 	
 	<action name="twitch_spawnArmor1" extends="twitch_spawnWeapon1">
-		<property name="command" value="#armor" />
+		<property name="command" value="#supply_armor" />
+		<property name="command_key" value="TwitchAction_SupplyArmorCommand" />
 		<property name="title_key" value="TwitchAction_SupplyArmor2" />
 		<property name="description_key" value="TwitchAction_SupplyArmor2Desc" />
 		<property name="start_gamestage" value="10" />
@@ -707,7 +569,8 @@
 	</action>
 	
 	<action name="twitch_spawnArmor2" extends="twitch_spawnWeapon1">
-		<property name="command" value="#armor" />
+		<property name="command" value="#supply_armor" />
+		<property name="command_key" value="TwitchAction_SupplyArmorCommand" />
 		<property name="title_key" value="TwitchAction_SupplyArmor3" />
 		<property name="description_key" value="TwitchAction_SupplyArmor3Desc" />
 		<property name="start_gamestage" value="50" />
@@ -717,7 +580,8 @@
 	</action>
 	
 	<action name="twitch_spawnMods1" extends="twitch_spawnWeapon1">
-		<property name="command" value="#mods" />
+		<property name="command" value="#supply_mods" />
+		<property name="command_key" value="TwitchAction_SupplyModsCommand" />
 		<property name="title_key" value="TwitchAction_SupplyMods1" />
 		<property name="description_key" value="TwitchAction_SupplyMods1Desc" />
 		<property name="start_gamestage" value="6" />
@@ -727,7 +591,8 @@
 	</action>
 	
 	<action name="twitch_spawnMods2" extends="twitch_spawnWeapon1">
-		<property name="command" value="#mods" />
+		<property name="command" value="#supply_mods" />
+		<property name="command_key" value="TwitchAction_SupplyModsCommand" />
 		<property name="title_key" value="TwitchAction_SupplyMods2" />
 		<property name="description_key" value="TwitchAction_SupplyMods2Desc" />
 		<property name="start_gamestage" value="16" />
@@ -737,7 +602,8 @@
 	</action>
 	
 	<action name="twitch_spawnMods3" extends="twitch_spawnWeapon1">
-		<property name="command" value="#mods" />
+		<property name="command" value="#supply_mods" />
+		<property name="command_key" value="TwitchAction_SupplyModsCommand" />
 		<property name="title_key" value="TwitchAction_SupplyMods3" />
 		<property name="description_key" value="TwitchAction_SupplyMods3Desc" />
 		<property name="start_gamestage" value="56" />
@@ -747,7 +613,8 @@
 	</action>
 	
 	<action name="twitch_spawnUtility1" extends="twitch_spawnWeapon1">
-		<property name="command" value="#utility" />
+		<property name="command" value="#supply_utility" />
+		<property name="command_key" value="TwitchAction_SupplyUtilityCommand" />
 		<property name="title_key" value="TwitchAction_SupplyUtility1" />
 		<property name="description_key" value="TwitchAction_SupplyUtility1Desc" />
 		<property name="start_gamestage" value="5" />
@@ -757,7 +624,8 @@
 	</action>
 	
 	<action name="twitch_spawnUtility2" extends="twitch_spawnWeapon1">
-		<property name="command" value="#utility" />
+		<property name="command" value="#supply_utility" />
+		<property name="command_key" value="TwitchAction_SupplyUtilityCommand" />
 		<property name="title_key" value="TwitchAction_SupplyUtility2" />
 		<property name="description_key" value="TwitchAction_SupplyUtility2Desc" />
 		<property name="start_gamestage" value="53" />
@@ -767,7 +635,8 @@
 	</action>
 	
 	<action name="twitch_spawnTool1" extends="twitch_spawnWeapon1">
-		<property name="command" value="#tool" />
+		<property name="command" value="#supply_tool" />
+		<property name="command_key" value="TwitchAction_SupplyToolCommand" />
 		<property name="title_key" value="TwitchAction_SupplyTool1" />
 		<property name="description_key" value="TwitchAction_SupplyTool1Desc" />
 		<property name="start_gamestage" value="10" />
@@ -777,7 +646,8 @@
 	</action>
 	
 	<action name="twitch_spawnTool2" extends="twitch_spawnWeapon1">
-		<property name="command" value="#tool" />
+		<property name="command" value="#supply_tool" />
+		<property name="command_key" value="TwitchAction_SupplyToolCommand" />
 		<property name="title_key" value="TwitchAction_SupplyTool2" />
 		<property name="description_key" value="TwitchAction_SupplyTool2Desc" />
 		<property name="start_gamestage" value="50" />
@@ -787,7 +657,8 @@
 	</action>
 	
 	<action name="twitch_spawnTool3" extends="twitch_spawnWeapon1">
-		<property name="command" value="#tool" />
+		<property name="command" value="#supply_tool" />
+		<property name="command_key" value="TwitchAction_SupplyToolCommand" />
 		<property name="title_key" value="TwitchAction_SupplyTool3" />
 		<property name="description_key" value="TwitchAction_SupplyTool3Desc" />
 		<property name="start_gamestage" value="90" />
@@ -797,7 +668,8 @@
 	</action>
 	
 	<action name="twitch_spawnMedicine1" extends="twitch_spawnWeapon1">
-		<property name="command" value="#meds" />
+		<property name="command" value="#supply_meds" />
+		<property name="command_key" value="TwitchAction_SupplyMedicineCommand" />
 		<property name="title_key" value="TwitchAction_SupplyMedicine1" />
 		<property name="description_key" value="TwitchAction_SupplyMedicine1Desc" />
 		<property name="start_gamestage" value="5" />
@@ -807,7 +679,8 @@
 	</action>
 	
 	<action name="twitch_spawnMedicine2" extends="twitch_spawnWeapon1">
-		<property name="command" value="#meds" />
+		<property name="command" value="#supply_meds" />
+		<property name="command_key" value="TwitchAction_SupplyMedicineCommand" />
 		<property name="title_key" value="TwitchAction_SupplyMedicine2" />
 		<property name="description_key" value="TwitchAction_SupplyMedicine2Desc" />
 		<property name="start_gamestage" value="15" />
@@ -817,7 +690,8 @@
 	</action>
 	
 	<action name="twitch_spawnMedicine3" extends="twitch_spawnWeapon1">
-		<property name="command" value="#meds" />
+		<property name="command" value="#supply_meds" />
+		<property name="command_key" value="TwitchAction_SupplyMedicineCommand" />
 		<property name="title_key" value="TwitchAction_SupplyMedicine3" />
 		<property name="description_key" value="TwitchAction_SupplyMedicine3Desc" />
 		<property name="start_gamestage" value="55" />
@@ -827,7 +701,8 @@
 	</action>
 	
 	<action name="twitch_spawnFoodWater" extends="twitch_spawnWeapon1">
-		<property name="command" value="#meal" />
+		<property name="command" value="#supply_meal" />
+		<property name="command_key" value="TwitchAction_SupplyFoodWaterCommand" />
 		<property name="title_key" value="TwitchAction_SupplyFoodWater1" />
 		<property name="description_key" value="TwitchAction_SupplyFoodWater1Desc" />
 		<property name="start_gamestage" value="6" />
@@ -837,7 +712,8 @@
 	</action>
 	
 	<action name="twitch_spawnFoodWater2" extends="twitch_spawnWeapon1">
-		<property name="command" value="#meal" />
+		<property name="command" value="#supply_meal" />
+		<property name="command_key" value="TwitchAction_SupplyFoodWaterCommand" />
 		<property name="title_key" value="TwitchAction_SupplyFoodWater2" />
 		<property name="description_key" value="TwitchAction_SupplyFoodWater2Desc" />
 		<property name="start_gamestage" value="16" />
@@ -847,7 +723,8 @@
 	</action>
 	
 	<action name="twitch_spawnFoodWater3" extends="twitch_spawnWeapon1">
-		<property name="command" value="#meal" />
+		<property name="command" value="#supply_meal" />
+		<property name="command_key" value="TwitchAction_SupplyFoodWaterCommand" />
 		<property name="title_key" value="TwitchAction_SupplyFoodWater3" />
 		<property name="description_key" value="TwitchAction_SupplyFoodWater3Desc" />
 		<property name="start_gamestage" value="56" />
@@ -857,7 +734,8 @@
 	</action>
 	
 	<action name="twitch_spawnFoodWater4" extends="twitch_spawnWeapon1">
-		<property name="command" value="#meal" />
+		<property name="command" value="#supply_meal" />
+		<property name="command_key" value="TwitchAction_SupplyFoodWaterCommand" />
 		<property name="title_key" value="TwitchAction_SupplyFoodWater4" />
 		<property name="description_key" value="TwitchAction_SupplyFoodWater4Desc" />
 		<property name="start_gamestage" value="96" />
@@ -867,7 +745,8 @@
 	</action>
 	
 	<action name="twitch_spawnBooks1" extends="twitch_spawnWeapon1">
-		<property name="command" value="#knowledge" />
+		<property name="command" value="#supply_books" />
+		<property name="command_key" value="TwitchAction_SupplyBooksCommand" />
 		<property name="title_key" value="TwitchAction_SupplyBooks1" />
 		<property name="description_key" value="TwitchAction_SupplyBooks1Desc" />
 		<property name="start_gamestage" value="15" />
@@ -877,7 +756,8 @@
 	</action>
 	
 	<action name="twitch_spawnBooks2" extends="twitch_spawnWeapon1">
-		<property name="command" value="#knowledge" />
+		<property name="command" value="#supply_books" />
+		<property name="command_key" value="TwitchAction_SupplyBooksCommand" />
 		<property name="title_key" value="TwitchAction_SupplyBooks2" />
 		<property name="description_key" value="TwitchAction_SupplyBooks2Desc" />
 		<property name="start_gamestage" value="55" />
@@ -887,7 +767,8 @@
 	</action>
 	
 	<action name="twitch_spawnBooks3" extends="twitch_spawnWeapon1">
-		<property name="command" value="#knowledge" />
+		<property name="command" value="#supply_books" />
+		<property name="command_key" value="TwitchAction_SupplyBooksCommand" />
 		<property name="title_key" value="TwitchAction_SupplyBooks3" />
 		<property name="description_key" value="TwitchAction_SupplyBooks3Desc" />
 		<property name="start_gamestage" value="95" />
@@ -897,7 +778,8 @@
 	</action>
 	
 	<action name="twitch_spawnBicycle" extends="twitch_spawnWeapon1">
-		<property name="command" value="#bike" />
+		<property name="command" value="#supply_bicycle" />
+		<property name="command_key" value="TwitchAction_SupplyBicycleCommand" />
 		<property name="title_key" value="TwitchAction_SupplyBicycle" />
 		<property name="description_key" value="TwitchAction_SupplyBicycleDesc" />
 		<property name="start_gamestage" value="5" />
@@ -907,7 +789,8 @@
 	</action>
 	
 	<action name="twitch_spawnMinibike" extends="twitch_spawnWeapon1">
-		<property name="command" value="#minibike" />
+		<property name="command" value="#supply_minibike" />
+		<property name="command_key" value="TwitchAction_SupplyMinibikeCommand" />
 		<property name="title_key" value="TwitchAction_SupplyMinibike" />
 		<property name="description_key" value="TwitchAction_SupplyMinibikeDesc" />
 		<property name="start_gamestage" value="30" />
@@ -917,7 +800,8 @@
 	</action>
 	
 	<action name="twitch_spawnMotorcycle" extends="twitch_spawnWeapon1">
-		<property name="command" value="#motorcycle" />
+		<property name="command" value="#supply_motorcycle" />
+		<property name="command_key" value="TwitchAction_SupplyMotorcycleCommand" />
 		<property name="title_key" value="TwitchAction_SupplyMotorcycle" />
 		<property name="description_key" value="TwitchAction_SupplyMotorcycleDesc" />
 		<property name="start_gamestage" value="75" />
@@ -927,7 +811,8 @@
 	</action>
 	
 	<action name="twitch_spawn4x4" extends="twitch_spawnWeapon1">
-		<property name="command" value="#4x4" />
+		<property name="command" value="#supply_4x4" />
+		<property name="command_key" value="TwitchAction_Supply4x4Command" />
 		<property name="title_key" value="TwitchAction_Supply4x4" />
 		<property name="description_key" value="TwitchAction_Supply4x4Desc" />
 		<property name="start_gamestage" value="120" />
@@ -937,7 +822,8 @@
 	</action>
 	
 	<action name="twitch_spawnResource0" extends="twitch_spawnWeapon1">
-		<property name="command" value="#resource" />
+		<property name="command" value="#supply_resource" />
+		<property name="command_key" value="TwitchAction_SupplyResourceCommand" />
 		<property name="title_key" value="TwitchAction_SupplyResource1" />
 		<property name="description_key" value="TwitchAction_SupplyResource1Desc" />
 		<property name="event_name" value="spawn_resource0" />
@@ -946,7 +832,8 @@
 	</action>
 	
 	<action name="twitch_spawnResource1" extends="twitch_spawnWeapon1">
-		<property name="command" value="#resource" />
+		<property name="command" value="#supply_resource" />
+		<property name="command_key" value="TwitchAction_SupplyResourceCommand" />
 		<property name="title_key" value="TwitchAction_SupplyResource2" />
 		<property name="description_key" value="TwitchAction_SupplyResource2Desc" />
 		<property name="start_gamestage" value="10" />
@@ -956,7 +843,8 @@
 	</action>
 	
 	<action name="twitch_spawnResource2" extends="twitch_spawnWeapon1">
-		<property name="command" value="#resource" />
+		<property name="command" value="#supply_resource" />
+		<property name="command_key" value="TwitchAction_SupplyResourceCommand" />
 		<property name="title_key" value="TwitchAction_SupplyResource3" />
 		<property name="description_key" value="TwitchAction_SupplyResource3Desc" />
 		<property name="start_gamestage" value="50" />
@@ -966,7 +854,8 @@
 	</action>
 	
 	<action name="twitch_spawnResource3" extends="twitch_spawnWeapon1">
-		<property name="command" value="#resource" />
+		<property name="command" value="#supply_resource" />
+		<property name="command_key" value="TwitchAction_SupplyResourceCommand" />
 		<property name="title_key" value="TwitchAction_SupplyResource4" />
 		<property name="description_key" value="TwitchAction_SupplyResource4Desc" />
 		<property name="start_gamestage" value="90" />
@@ -976,7 +865,8 @@
 	</action>
 	
 	<action name="twitch_ElectricalCrate1" extends="twitch_spawnWeapon1">
-		<property name="command" value="#electrical" />
+		<property name="command" value="#supply_electrical" />
+		<property name="command_key" value="TwitchAction_SupplyElectricalCommand" />
 		<property name="title_key" value="TwitchAction_SupplyElectrical1" />
 		<property name="description_key" value="TwitchAction_SupplyElectrical1Desc" />
 		<property name="start_gamestage" value="30" />
@@ -986,7 +876,8 @@
 	</action>
 	
 	<action name="twitch_ElectricalCrate2" extends="twitch_spawnWeapon1">
-		<property name="command" value="#electrical" />
+		<property name="command" value="#supply_electrical" />
+		<property name="command_key" value="TwitchAction_SupplyElectricalCommand" />
 		<property name="title_key" value="TwitchAction_SupplyElectrical2" />
 		<property name="description_key" value="TwitchAction_SupplyElectrical2Desc" />
 		<property name="start_gamestage" value="70" />
@@ -996,7 +887,8 @@
 	</action>
 	
 	<action name="twitch_AmmoCrate0" extends="twitch_spawnWeapon1">
-		<property name="command" value="#ammo" />
+		<property name="command" value="#supply_ammo" />
+		<property name="command_key" value="TwitchAction_SupplyAmmoCommand" />
 		<property name="title_key" value="TwitchAction_SupplyAmmo1" />
 		<property name="description_key" value="TwitchAction_SupplyAmmo1Desc" />
 		<property name="event_name" value="spawn_ammo1" />
@@ -1005,7 +897,8 @@
 	</action>
 	
 	<action name="twitch_AmmoCrate1" extends="twitch_spawnWeapon1">
-		<property name="command" value="#ammo" />
+		<property name="command" value="#supply_ammo" />
+		<property name="command_key" value="TwitchAction_SupplyAmmoCommand" />
 		<property name="title_key" value="TwitchAction_SupplyAmmo2" />
 		<property name="description_key" value="TwitchAction_SupplyAmmo2Desc" />
 		<property name="start_gamestage" value="10" />
@@ -1015,7 +908,8 @@
 	</action>
 	
 	<action name="twitch_AmmoCrate2" extends="twitch_spawnWeapon1">
-		<property name="command" value="#ammo" />
+		<property name="command" value="#supply_ammo" />
+		<property name="command_key" value="TwitchAction_SupplyAmmoCommand" />
 		<property name="title_key" value="TwitchAction_SupplyAmmo3" />
 		<property name="description_key" value="TwitchAction_SupplyAmmo3Desc" />
 		<property name="start_gamestage" value="50" />
@@ -1025,7 +919,8 @@
 	</action>
 	
 	<action name="twitch_AmmoCrate3" extends="twitch_spawnWeapon1">
-		<property name="command" value="#ammo" />
+		<property name="command" value="#supply_ammo" />
+		<property name="command_key" value="TwitchAction_SupplyAmmoCommand" />
 		<property name="title_key" value="TwitchAction_SupplyAmmo4" />
 		<property name="description_key" value="TwitchAction_SupplyAmmo4Desc" />
 		<property name="start_gamestage" value="90" />
@@ -1035,7 +930,8 @@
 	</action>
 	
 	<action name="twitch_SpecialAmmoCrate1" extends="twitch_spawnWeapon1">
-		<property name="command" value="#sammo" />
+		<property name="command" value="#supply_sammo" />
+		<property name="command_key" value="TwitchAction_SupplySpecialAmmoCommand" />
 		<property name="title_key" value="TwitchAction_SupplySpecialAmmo1" />
 		<property name="description_key" value="TwitchAction_SupplySpecialAmmo1Desc" />
 		<property name="start_gamestage" value="10" />
@@ -1045,7 +941,8 @@
 	</action>
 	
 	<action name="twitch_SpecialAmmoCrate2" extends="twitch_spawnWeapon1">
-		<property name="command" value="#sammo" />
+		<property name="command" value="#supply_sammo" />
+		<property name="command_key" value="TwitchAction_SupplySpecialAmmoCommand" />
 		<property name="title_key" value="TwitchAction_SupplySpecialAmmo2" />
 		<property name="description_key" value="TwitchAction_SupplySpecialAmmo2Desc" />
 		<property name="start_gamestage" value="25" />
@@ -1055,7 +952,8 @@
 	</action>
 	
 	<action name="twitch_Explosives1" extends="twitch_spawnWeapon1">
-		<property name="command" value="#explosives" />
+		<property name="command" value="#supply_explosives" />
+		<property name="command_key" value="TwitchAction_SupplyExplosivesCommand" />
 		<property name="title_key" value="TwitchAction_SupplyExplosives1" />
 		<property name="description_key" value="TwitchAction_SupplyExplosives1Desc" />
 		<property name="start_gamestage" value="8" />
@@ -1065,7 +963,8 @@
 	</action>
 	
 	<action name="twitch_Explosives2" extends="twitch_spawnWeapon1">
-		<property name="command" value="#explosives" />
+		<property name="command" value="#supply_explosives" />
+		<property name="command_key" value="TwitchAction_SupplyExplosivesCommand" />
 		<property name="title_key" value="TwitchAction_SupplyExplosives2" />
 		<property name="description_key" value="TwitchAction_SupplyExplosives2Desc" />
 		<property name="start_gamestage" value="20" />
@@ -1075,7 +974,8 @@
 	</action>
 	
 	<action name="twitch_Explosives3" extends="twitch_spawnWeapon1">
-		<property name="command" value="#explosives" />
+		<property name="command" value="#supply_explosives" />
+		<property name="command_key" value="TwitchAction_SupplyExplosivesCommand" />
 		<property name="title_key" value="TwitchAction_SupplyExplosives3" />
 		<property name="description_key" value="TwitchAction_SupplyExplosives3Desc" />
 		<property name="start_gamestage" value="60" />
@@ -1085,7 +985,8 @@
 	</action>
 	
 	<action name="twitch_Explosives4" extends="twitch_spawnWeapon1">
-		<property name="command" value="#explosives" />
+		<property name="command" value="#supply_explosives" />
+		<property name="command_key" value="TwitchAction_SupplyExplosivesCommand" />
 		<property name="title_key" value="TwitchAction_SupplyExplosives4" />
 		<property name="description_key" value="TwitchAction_SupplyExplosives4Desc" />
 		<property name="start_gamestage" value="100" />
@@ -1095,7 +996,8 @@
 	</action>
 	
 	<action name="twitch_Robo1" extends="twitch_spawnWeapon1">
-		<property name="command" value="#robo" />
+		<property name="command" value="#supply_robo" />
+		<property name="command_key" value="TwitchAction_SupplyRoboCommand" />
 		<property name="title_key" value="TwitchAction_SupplyRobo1" />
 		<property name="description_key" value="TwitchAction_SupplyRobo1Desc" />
 		<property name="start_gamestage" value="12" />
@@ -1105,7 +1007,8 @@
 	</action>
 	
 	<action name="twitch_Robo2" extends="twitch_spawnWeapon1">
-		<property name="command" value="#robo" />
+		<property name="command" value="#supply_robo" />
+		<property name="command_key" value="TwitchAction_SupplyRoboCommand" />
 		<property name="title_key" value="TwitchAction_SupplyRobo2" />
 		<property name="description_key" value="TwitchAction_SupplyRobo2Desc" />
 		<property name="start_gamestage" value="52" />
@@ -1115,7 +1018,8 @@
 	</action>
 	
 	<action name="twitch_Robo3" extends="twitch_spawnWeapon1">
-		<property name="command" value="#robo" />
+		<property name="command" value="#supply_robo" />
+		<property name="command_key" value="TwitchAction_SupplyRoboCommand" />
 		<property name="title_key" value="TwitchAction_SupplyRobo3" />
 		<property name="description_key" value="TwitchAction_SupplyRobo3Desc" />
 		<property name="start_gamestage" value="92" />
@@ -1123,132 +1027,12 @@
 		<property name="default_cost" value="300" />
 		<property name="cooldown" value="600" />
 	</action>
-
-    <!-- CUSTOM CRATE SPAWN TEMPLATE -->
-
-    <action name="twitch_spawn_god">
-		<property name="is_crate" value="true" />
-		<property name="default_cost" value="0" />
-		<property name="ignore_cooldown" value="true" />
-		<property name="add_cooldown" value="false" />
-		<property name="cooldown_blocked" value="false" />
-		<property name="waiting_blocked" value="false" />
-		<property name="only_usable_type" value="Name" />
-		<property name="only_usable_by" value="ponkberry,ObiWannCoyote" />
-	</action>
-
-    <!-- CUSTOM CRATE COMMANDS -->
-
-	<action name="twitch_cheer_knowledge1">
-		<property name="command" value="cheer300" />
-		<property name="event_name" value="spawn_random_knowledge" />
-		<property name="category" value="Spawns,Supplies" />
-		<property name="is_crate" value="true" />
-		<property name="default_cost" value="300" />
-		<property name="ignore_cooldown" value="true" />
-		<property name="add_cooldown" value="false" />
-		<property name="cooldown_blocked" value="false" />
-		<property name="waiting_blocked" value="false" />
-		<property name="is_positive" value="true" />
-		<property name="cooldown" value="0" />
-	</action>
-
-	<action name="twitch_spawnTier1Crate" extends="twitch_spawnWeapon1">
-		<property name="command" value="#random1" />
-		<property name="start_gamestage" value="5" />
-		<property name="event_name" value="spawn_tier1" />
-		<property name="default_cost" value="150" />
-		<property name="cooldown" value="120" />
-	</action>
-
-	<action name="twitch_spawnTier2Crate" extends="twitch_spawnWeapon1">
-		<property name="command" value="#random2" />
-		<property name="start_gamestage" value="50" />
-		<property name="event_name" value="spawn_tier2" />
-		<property name="default_cost" value="250" />
-		<property name="cooldown" value="120" />
-	</action>
-
-	<action name="twitch_spawnTier3Crate" extends="twitch_spawnWeapon1">
-		<property name="command" value="#random3" />
-		<property name="start_gamestage" value="75" />
-		<property name="event_name" value="spawn_tier3" />
-		<property name="default_cost" value="350" />
-		<property name="cooldown" value="120" />
-	</action>
-
-	<action name="twitch_coy_loot" extends="twitch_spawnWeapon1">
-		<property name="command" value="#coy_loot" />
-		<property name="start_gamestage" value="50" />
-		<property name="event_name" value="spawn_coyloot" />
-		<property name="default_cost" value="1000" />
-		<property name="cooldown" value="120" />
-	</action>
-
-	<action name="twitch_streamer_loot" extends="twitch_spawnWeapon1">
-		<property name="command" value="#streamer_loot" />
-		<property name="start_gamestage" value="100" />
-		<property name="event_name" value="spawn_loot" />
-		<property name="default_cost" value="2000" />		
-		<property name="cooldown" value="600" />
-	</action>
-
-	<action name="twitch_meggs" extends="twitch_spawnWeapon1">
-		<property name="command" value="#meggs" />
-		<property name="start_gamestage" value="10" />
-		<property name="event_name" value="spawn_meggs" />
-		<property name="default_cost" value="250" />		
-		<property name="cooldown" value="300" />
-	</action>
-
-	<action name="twitch_spawn_custom1" extends="twitch_spawn_god">
-		<property name="command" value="#custom1" />
-		<property name="category" value="Special" />
-		<property name="event_name" value="spawn_custom1" />
-		<property name="default_cost" value="0" />
-	</action>
-
-	<action name="twitch_spawn_custom2" extends="twitch_spawn_god">
-		<property name="command" value="#custom2" />
-		<property name="category" value="Special" />
-		<property name="event_name" value="spawn_custom2" />
-		<property name="default_cost" value="0" />
-	</action>
-
-	<action name="twitch_knowledge" extends="twitch_spawn_god">
-		<property name="command" value="#smort" />
-		<property name="category" value="Special" />
-		<property name="event_name" value="spawn_knowledge" />
-	</action>
-
-	<action name="twitch_test" extends="twitch_spawn_god">
-		<property name="command" value="#test" />
-		<property name="category" value="Special" />
-		<property name="event_name" value="spawn_test" />
-	</action>
-
-	<action name="twitch_erangel_med_surplus" extends="twitch_spawn_god">
-		<property name="command" value="#erangel_med_surplus" />
-		<property name="category" value="Special" />
-		<property name="event_name" value="spawn_medsurplus" />
-	</action>
-
-	<action name="twitch_ammodrop" extends="twitch_spawn_god">
-		<property name="command" value="#ammo_drop" />
-		<property name="category" value="Special" />
-		<property name="event_name" value="spawn_ammodrop" />
-	</action>
-
-	<action name="twitch_feastdrop" extends="twitch_spawn_god">
-		<property name="command" value="#feast" />
-		<property name="category" value="Special" />
-		<property name="event_name" value="spawn_feastdrop" />
-	</action>
 	
 	<!-- BUFFS/DEBUFFS -->
 	
-	<!-- <action name="twitch_buffBlur">
+	<action name="twitch_buffBlur">
 		<property name="command" value="#blur" />
+		<property name="command_key" value="TwitchAction_BuffBlurCommand" />
 		<property name="title_key" value="TwitchAction_BuffBlur" />
 		<property name="description_key" value="TwitchAction_BuffBlurDesc" />
 		<property name="category" value="Buffs,Debuffs" />
@@ -1266,6 +1050,7 @@
 	
 	<action name="twitch_buffDistort">
 		<property name="command" value="#distort" />
+		<property name="command_key" value="TwitchAction_BuffDistortCommand" />
 		<property name="title_key" value="TwitchAction_BuffDistort" />
 		<property name="description_key" value="TwitchAction_BuffDistortDesc" />
 		<property name="category" value="Buffs,Debuffs" />
@@ -1283,6 +1068,7 @@
 	
 	<action name="twitch_buffGreyscale">
 		<property name="command" value="#greyscale" />
+		<property name="command_key" value="TwitchAction_BuffGreyscaleCommand" />
 		<property name="title_key" value="TwitchAction_BuffGreyscale" />
 		<property name="description_key" value="TwitchAction_BuffGreyscaleDesc" />
 		<property name="category" value="Buffs,Debuffs" />
@@ -1300,6 +1086,7 @@
 	
 	<action name="twitch_buffPainting">
 		<property name="command" value="#painting" />
+		<property name="command_key" value="TwitchAction_BuffPaintingCommand" />
 		<property name="title_key" value="TwitchAction_BuffPainting" />
 		<property name="description_key" value="TwitchAction_BuffPaintingDesc" />
 		<property name="category" value="Buffs,Debuffs" />
@@ -1313,10 +1100,11 @@
 		<cooldown_addition name="twitch_buffBlur" time="60" />
 		<cooldown_addition name="twitch_buffGreyscale" time="60" />
 		<cooldown_addition name="twitch_buffHeadshotOnly" time="60" />
-	</action> -->
+	</action>
 	
 	<action name="twitch_buffRegen">
 		<property name="command" value="#regen" />
+		<property name="command_key" value="TwitchAction_BuffRegenCommand" />
 		<property name="title_key" value="TwitchAction_BuffRegen" />
 		<property name="description_key" value="TwitchAction_BuffRegenDesc" />
 		<property name="category" value="Buffs" />
@@ -1328,6 +1116,7 @@
 	
 	<action name="twitch_buffHurt">
 		<property name="command" value="#hurt" />
+		<property name="command_key" value="TwitchAction_BuffHurtCommand" />
 		<property name="title_key" value="TwitchAction_BuffHurt" />
 		<property name="description_key" value="TwitchAction_BuffHurtDesc" />
 		<property name="category" value="Buffs,Debuffs" />
@@ -1341,6 +1130,7 @@
 	
 	<action name="twitch_buffFast">
 		<property name="command" value="#fast" />
+		<property name="command_key" value="TwitchAction_BuffFastCommand" />
 		<property name="title_key" value="TwitchAction_BuffFast" />
 		<property name="description_key" value="TwitchAction_BuffFastDesc" />
 		<property name="category" value="Buffs" />
@@ -1352,6 +1142,7 @@
 	
 	<action name="twitch_buffSlow">
 		<property name="command" value="#slow" />
+		<property name="command_key" value="TwitchAction_BuffSlowCommand" />
 		<property name="title_key" value="TwitchAction_BuffSlow" />
 		<property name="description_key" value="TwitchAction_BuffSlowDesc" />
 		<property name="category" value="Buffs,Debuffs" />
@@ -1363,6 +1154,7 @@
 	
 	<action name="twitch_buffJump">
 		<property name="command" value="#jump" />
+		<property name="command_key" value="TwitchAction_BuffJumpCommand" />
 		<property name="title_key" value="TwitchAction_BuffJump" />
 		<property name="description_key" value="TwitchAction_BuffJumpDesc" />
 		<property name="category" value="Buffs" />
@@ -1374,6 +1166,7 @@
 	
 	<action name="twitch_buffEnergize">
 		<property name="command" value="#energize" />
+		<property name="command_key" value="TwitchAction_BuffEnergizeCommand" />
 		<property name="title_key" value="TwitchAction_BuffEnergize" />
 		<property name="description_key" value="TwitchAction_BuffEnergizeDesc" />
 		<property name="category" value="Buffs" />
@@ -1385,6 +1178,7 @@
 	
 	<action name="twitch_buffShield">
 		<property name="command" value="#shield" />
+		<property name="command_key" value="TwitchAction_BuffShieldCommand" />
 		<property name="title_key" value="TwitchAction_BuffShield" />
 		<property name="description_key" value="TwitchAction_BuffShieldDesc" />
 		<property name="category" value="Buffs" />
@@ -1397,6 +1191,7 @@
 	
 	<action name="twitch_buffCelebrate">
 		<property name="command" value="#celebrate" />
+		<property name="command_key" value="TwitchAction_BuffCelebrateCommand" />
 		<property name="title_key" value="TwitchAction_BuffCelebrate" />
 		<property name="description_key" value="TwitchAction_BuffCelebrateDesc" />
 		<property name="category" value="Buffs" />
@@ -1409,6 +1204,7 @@
 	
 	<action name="twitch_buffBoostMelee">
 		<property name="command" value="#boost_melee" />
+		<property name="command_key" value="TwitchAction_BuffBoostMeleeCommand" />
 		<property name="title_key" value="TwitchAction_BuffBoostMelee" />
 		<property name="description_key" value="TwitchAction_BuffBoostMeleeDesc" />
 		<property name="category" value="Buffs" />
@@ -1423,6 +1219,7 @@
 	
 	<action name="twitch_buffBoostRanged">
 		<property name="command" value="#boost_range" />
+		<property name="command_key" value="TwitchAction_BuffBoostRangeCommand" />
 		<property name="title_key" value="TwitchAction_BuffBoostRange" />
 		<property name="description_key" value="TwitchAction_BuffBoostRangeDesc" />
 		<property name="category" value="Buffs" />
@@ -1437,6 +1234,7 @@
 	
 	<action name="twitch_buffWeakenMelee">
 		<property name="command" value="#weak_melee" />
+		<property name="command_key" value="TwitchAction_BuffWeakenMeleeCommand" />
 		<property name="title_key" value="TwitchAction_BuffWeakenMelee" />
 		<property name="description_key" value="TwitchAction_BuffWeakenMeleeDesc" />
 		<property name="category" value="Buffs,Debuffs" />
@@ -1454,13 +1252,14 @@
 	
 	<action name="twitch_buffNoMelee">
 		<property name="command" value="#no_melee" />
+		<property name="command_key" value="TwitchAction_BuffNoMeleeCommand" />
 		<property name="title_key" value="TwitchAction_BuffNoMelee" />
 		<property name="description_key" value="TwitchAction_BuffNoMeleeDesc" />
 		<property name="category" value="Buffs,Debuffs" />
-		<property name="start_gamestage" value="100" />
+		<property name="start_gamestage" value="35" />
 		<property name="event_name" value="buff_nomelee" />
-		<property name="default_cost" value="500" />
-		<property name="cooldown" value="3600" />
+		<property name="default_cost" value="100" />
+		<property name="cooldown" value="300" />
 		<property name="cooldown_blocked" value="true" />
 		<property name="replaces" value="#weak_melee" />
 		
@@ -1472,6 +1271,7 @@
 	
 	<action name="twitch_buffWeakenRanged">
 		<property name="command" value="#weak_range" />
+		<property name="command_key" value="TwitchAction_BuffWeakenRangeCommand" />
 		<property name="title_key" value="TwitchAction_BuffWeakenRange" />
 		<property name="description_key" value="TwitchAction_BuffWeakenRangeDesc" />
 		<property name="category" value="Buffs,Debuffs" />
@@ -1489,13 +1289,14 @@
 	
 	<action name="twitch_buffNoRanged">
 		<property name="command" value="#no_range" />
+		<property name="command_key" value="TwitchAction_BuffNoRangeCommand" />
 		<property name="title_key" value="TwitchAction_BuffNoRange" />
 		<property name="description_key" value="TwitchAction_BuffNoRangeDesc" />
 		<property name="category" value="Buffs,Debuffs" />
-		<property name="start_gamestage" value="100" />
+		<property name="start_gamestage" value="35" />
 		<property name="event_name" value="buff_norange" />
-		<property name="default_cost" value="1000" />
-		<property name="cooldown" value="3600" />
+		<property name="default_cost" value="100" />
+		<property name="cooldown" value="300" />
 		<property name="cooldown_blocked" value="true" />
 		<property name="replaces" value="#weak_range" />
 		
@@ -1507,18 +1308,21 @@
 	
 	<action name="twitch_buffNoVehicle">
 		<property name="command" value="#no_vehicle" />
+		<property name="command_key" value="TwitchAction_BuffNoVehicleCommand" />
 		<property name="title_key" value="TwitchAction_BuffNoVehicle" />
 		<property name="description_key" value="TwitchAction_BuffNoVehicleDesc" />
 		<property name="category" value="Buffs,Debuffs" />
 		<property name="start_gamestage" value="10" />
 		<property name="event_name" value="buff_novehicle" />
-		<property name="default_cost" value="5000" />
-		<property name="cooldown" value="6000" />
+		<property name="default_cost" value="250" />
+		<property name="cooldown" value="600" />
 		<property name="cooldown_blocked" value="true" />
+		
 	</action>
 	
 	<action name="twitch_buffNoExplosives">
 		<property name="command" value="#no_explosives" />
+		<property name="command_key" value="TwitchAction_BuffNoExplosivesCommand" />
 		<property name="title_key" value="TwitchAction_BuffNoExplosives" />
 		<property name="description_key" value="TwitchAction_BuffNoExplosivesDesc" />
 		<property name="category" value="Buffs,Debuffs" />
@@ -1534,6 +1338,7 @@
 	
 	<action name="twitch_buffNoRobo">
 		<property name="command" value="#no_robo" />
+		<property name="command_key" value="TwitchAction_BuffNoRoboCommand" />
 		<property name="title_key" value="TwitchAction_BuffNoRobo" />
 		<property name="description_key" value="TwitchAction_BuffNoRoboDesc" />
 		<property name="category" value="Buffs,Debuffs" />
@@ -1549,6 +1354,7 @@
 	
 	<action name="twitch_buffNoStealth">
 		<property name="command" value="#no_stealth" />
+		<property name="command_key" value="TwitchAction_BuffNoStealthCommand" />
 		<property name="title_key" value="TwitchAction_BuffNoStealth" />
 		<property name="description_key" value="TwitchAction_BuffNoStealthDesc" />
 		<property name="category" value="Buffs,Debuffs" />
@@ -1565,6 +1371,7 @@
 	
 	<action name="twitch_buffLeech">
 		<property name="command" value="#leech" />
+		<property name="command_key" value="TwitchAction_BuffLeechCommand" />
 		<property name="title_key" value="TwitchAction_BuffLeech" />
 		<property name="description_key" value="TwitchAction_BuffLeechDesc" />
 		<property name="category" value="Buffs" />
@@ -1578,6 +1385,7 @@
 	
 	<action name="twitch_buffAntiLeech">
 		<property name="command" value="#antileech" />
+		<property name="command_key" value="TwitchAction_BuffAntiLeechCommand" />
 		<property name="title_key" value="TwitchAction_BuffAntiLeech" />
 		<property name="description_key" value="TwitchAction_BuffAntiLeechDesc" />
 		<property name="category" value="Buffs,Debuffs" />
@@ -1592,10 +1400,12 @@
 		<cooldown_addition name="twitch_buffWeakenMelee" time="60" />
 		<cooldown_addition name="twitch_buffNoMelee" time="60" />
 		<cooldown_addition name="twitch_buffHeadshotOnly" time="60" />
+		
 	</action>
 	
 	<action name="twitch_buffKeepMoving">
 		<property name="command" value="#keep_moving" />
+		<property name="command_key" value="TwitchAction_BuffKeepMovingCommand" />
 		<property name="title_key" value="TwitchAction_BuffKeepMoving" />
 		<property name="description_key" value="TwitchAction_BuffKeepMovingDesc" />
 		<property name="category" value="Buffs,Debuffs" />
@@ -1609,6 +1419,7 @@
 	
 	<action name="twitch_buffStayStill">
 		<property name="command" value="#stay_still" />
+		<property name="command_key" value="TwitchAction_BuffStayStillCommand" />
 		<property name="title_key" value="TwitchAction_BuffStayStill" />
 		<property name="description_key" value="TwitchAction_BuffStayStillDesc" />
 		<property name="category" value="Buffs" />
@@ -1623,6 +1434,7 @@
 	
 	<action name="twitch_buffHeadshotOnly">
 		<property name="command" value="#headshot" />
+		<property name="command_key" value="TwitchAction_BuffHeadshotOnlyCommand" />
 		<property name="title_key" value="TwitchAction_BuffHeadshotOnly" />
 		<property name="description_key" value="TwitchAction_BuffHeadshotOnlyDesc" />
 		<property name="category" value="Buffs,Debuffs" />
@@ -1642,11 +1454,13 @@
 		<cooldown_addition name="twitch_buffWeakenMelee" time="60" />
 		<cooldown_addition name="twitch_buffNoRanged" time="60" />
 		<cooldown_addition name="twitch_buffNoMelee" time="60" />
-		<cooldown_addition name="twitch_BigHead" time="90" />		
+		<cooldown_addition name="twitch_BigHead" time="90" />
+		
 	</action>
 	
 	<action name="twitch_buffConfuse">
 		<property name="command" value="#confuse" />
+		<property name="command_key" value="TwitchAction_BuffConfuseCommand" />
 		<property name="title_key" value="TwitchAction_BuffConfuse" />
 		<property name="description_key" value="TwitchAction_BuffConfuseDesc" />
 		<property name="category" value="Buffs,Debuffs" />
@@ -1662,6 +1476,7 @@
 	
 	<action name="twitch_buffDeafen">
 		<property name="command" value="#deafen" />
+		<property name="command_key" value="TwitchAction_BuffDeafenCommand" />
 		<property name="title_key" value="TwitchAction_BuffDeafen" />
 		<property name="description_key" value="TwitchAction_BuffDeafenDesc" />
 		<property name="category" value="Buffs,Debuffs" />
@@ -1683,6 +1498,7 @@
 	
 	<action name="twitch_buffSillySounds">
 		<property name="command" value="#silly" />
+		<property name="command_key" value="TwitchAction_BuffSillySoundsCommand" />
 		<property name="title_key" value="TwitchAction_BuffSillySounds" />
 		<property name="description_key" value="TwitchAction_BuffSillySoundsDesc" />
 		<property name="title" value="Silly Sounds" />
@@ -1691,13 +1507,15 @@
 		<property name="event_name" value="buff_sillysounds" />
 		<property name="default_cost" value="100" />
 		<property name="is_positive" value="true" />
-		<property name="cooldown" value="300" />
+		<property name="cooldown" value="900" />
 		
-		<cooldown_addition name="twitch_buffDeafen" time="150" />		
+		<cooldown_addition name="twitch_buffDeafen" time="150" />
+		
 	</action>
 	
 	<action name="twitch_Ragdoll">
 		<property name="command" value="#ragdoll" />
+		<property name="command_key" value="TwitchAction_ActionRagdollCommand" />
 		<property name="title_key" value="TwitchAction_ActionRagdoll" />
 		<property name="description_key" value="TwitchAction_ActionRagdollDesc" />
 		<property name="category" value="Special" />
@@ -1711,6 +1529,7 @@
 	
 	<action name="twitch_ShockNearby" extends="twitch_Ragdoll">
 		<property name="command" value="#shock_near" />
+		<property name="command_key" value="TwitchAction_ActionShockNearbyCommand" />
 		<property name="title_key" value="TwitchAction_ActionShockNearby" />
 		<property name="description_key" value="TwitchAction_ActionShockNearbyDesc" />
 		<property name="category" value="Special" />
@@ -1723,6 +1542,7 @@
 	
 	<action name="twitch_BurnNearby" extends="twitch_Ragdoll">
 		<property name="command" value="#burn_near" />
+		<property name="command_key" value="TwitchAction_ActionBurnNearbyCommand" />
 		<property name="title_key" value="TwitchAction_ActionBurnNearby" />
 		<property name="description_key" value="TwitchAction_ActionBurnNearbyDesc" />
 		<property name="category" value="Special" />
@@ -1735,6 +1555,7 @@
 	
 	<action name="twitch_Kaboom">
 		<property name="command" value="#kaboom" />
+		<property name="command_key" value="TwitchAction_ActionKaboomCommand" />
 		<property name="title_key" value="TwitchAction_ActionKaboom" />
 		<property name="description_key" value="TwitchAction_ActionKaboomDesc" />
 		<property name="category" value="Special" />
@@ -1748,6 +1569,7 @@
 	
 	<action name="twitch_Repair">
 		<property name="command" value="#repair" />
+		<property name="command_key" value="TwitchAction_ActionRepairCommand" />
 		<property name="title_key" value="TwitchAction_ActionRepair" />
 		<property name="description_key" value="TwitchAction_ActionRepairDesc" />
 		<property name="category" value="Special" />
@@ -1762,6 +1584,7 @@
 	
 	<action name="twitch_Degrade">
 		<property name="command" value="#degrade" />
+		<property name="command_key" value="TwitchAction_ActionDegradeCommand" />
 		<property name="title_key" value="TwitchAction_ActionDegrade" />
 		<property name="description_key" value="TwitchAction_ActionDegradeDesc" />
 		<property name="category" value="Special" />
@@ -1775,6 +1598,7 @@
 	
 	<action name="twitch_Enrage">
 		<property name="command" value="#enrage" />
+		<property name="command_key" value="TwitchAction_ActionEnrageCommand" />
 		<property name="title_key" value="TwitchAction_ActionEnrage" />
 		<property name="description_key" value="TwitchAction_ActionEnrageDesc" />
 		<property name="category" value="Special" />
@@ -1787,6 +1611,7 @@
 	
 	<action name="twitch_PullZombies">
 		<property name="command" value="#pull" />
+		<property name="command_key" value="TwitchAction_ActionPullCommand" />
 		<property name="title_key" value="TwitchAction_ActionPull" />
 		<property name="description_key" value="TwitchAction_ActionPullDesc" />
 		<property name="category" value="Special" />
@@ -1800,20 +1625,22 @@
 	
 	<action name="twitch_Spoil">
 		<property name="command" value="#spoil" />
+		<property name="command_key" value="TwitchAction_ActionSpoilCommand" />
 		<property name="title_key" value="TwitchAction_ActionSpoil" />
 		<property name="description_key" value="TwitchAction_ActionSpoilDesc" />
 		<property name="category" value="Special" />
 		<property name="start_gamestage" value="30" />
 		<property name="event_name" value="action_spoil" />
-		<property name="default_cost" value="10000" />
+		<property name="default_cost" value="150" />
 		<property name="is_positive" value="false" />
-		<property name="cooldown" value="6000" />
+		<property name="cooldown" value="600" />
 		<property name="cooldown_blocked" value="true" />
 		<property name="random_group" value="special_bad" />
 	</action>
 	
 	<action name="twitch_Reverse">
 		<property name="command" value="#reverse" />
+		<property name="command_key" value="TwitchAction_ActionReverseCommand" />
 		<property name="title" value="Reverse" />
 		<property name="title_key" value="TwitchAction_ActionReverse" />
 		<property name="description_key" value="TwitchAction_ActionReverseDesc" />
@@ -1828,6 +1655,7 @@
 	
 	<action name="twitch_Scare1">
 		<property name="command" value="#scare" />
+		<property name="command_key" value="TwitchAction_ActionScareCommand" />
 		<property name="title_key" value="TwitchAction_ActionScare1" />
 		<property name="description_key" value="TwitchAction_ActionScare1Desc" />
 		<property name="category" value="Special" />
@@ -1841,6 +1669,7 @@
 	
 	<action name="twitch_Scare2">
 		<property name="command" value="#scare" />
+		<property name="command_key" value="TwitchAction_ActionScareCommand" />
 		<property name="title_key" value="TwitchAction_ActionScare2" />
 		<property name="description_key" value="TwitchAction_ActionScare2Desc" />
 		<property name="category" value="Special" />
@@ -1854,6 +1683,7 @@
 	</action>
 	
 	<action name="twitch_Scare3">
+		<property name="command_key" value="TwitchAction_ActionScareCommand" />
 		<property name="command" value="#scare" />
 		<property name="title_key" value="TwitchAction_ActionScare3" />
 		<property name="description_key" value="TwitchAction_ActionScare3Desc" />
@@ -1868,6 +1698,7 @@
 	</action>
 	
 	<action name="twitch_BigHead">
+		<property name="command_key" value="TwitchAction_BuffBigHeadCommand" />
 		<property name="command" value="#big_head" />
 		<property name="title_key" value="TwitchAction_BuffBigHead" />
 		<property name="description_key" value="TwitchAction_BuffBigHeadDesc" />
@@ -1883,6 +1714,7 @@
 	</action>
 	
 	<action name="twitch_Dance">
+		<property name="command_key" value="TwitchAction_BuffDanceOffCommand" />
 		<property name="title" value="Dance Off" />
 		<property name="title_key" value="TwitchAction_BuffDanceOff" />
 		<property name="description_key" value="TwitchAction_BuffDanceOffDesc" />
@@ -1901,80 +1733,10 @@
 		
 		<cooldown_addition name="twitch_buffDeafen" time="90" />
 	</action>
-
-    <!-- Custom Buff Commands -->
-
-    <action name="twitch_buffCute">
-		<property name="command" value="#cute" />
-		<property name="title" value="Silly Sounds" />
-		<property name="category" value="Special" />
-		<property name="event_name" value="buff_cute" />
-		<property name="default_cost" value="-100" />
-		<property name="ignore_cooldown" value="true" />
-		<property name="add_cooldown" value="false" />
-		<property name="cooldown_blocked" value="false" />
-		<property name="waiting_blocked" value="false" />
-		<property name="only_usable_type" value="Name" />
-		<property name="only_usable_by" value="ponkberry,msspenny" />
-	</action>
-
-    <action name="twitch_rigged">
-		<property name="command" value="#rigged" />
-		<property name="category" value="Special" />
-		<property name="event_name" value="action_scare3" />
-		<property name="is_crate" value="true" />
-		<property name="default_cost" value="-100" />
-		<property name="ignore_cooldown" value="true" />
-		<property name="add_cooldown" value="false" />
-		<property name="cooldown_blocked" value="false" />
-		<property name="waiting_blocked" value="false" />
-		<property name="only_usable_type" value="Name" />
-		<property name="only_usable_by" value="ponkberry,msspenny,ObiWannCoyote" />
-	</action>
-
-	<action name="twitch_dictatorship">
-		<property name="command" value="#dictatorship" />
-		<property name="category" value="Special" />
-		<property name="event_name" value="buff_bish" />
-		<property name="is_crate" value="true" />
-		<property name="default_cost" value="-100000" />
-		<property name="ignore_cooldown" value="true" />
-		<property name="add_cooldown" value="false" />
-		<property name="cooldown_blocked" value="false" />
-		<property name="waiting_blocked" value="false" />
-		<property name="only_usable_type" value="Name" />
-		<property name="only_usable_by" value="ponkberry,ObiWannCoyote" />
-	</action>
-
-	<action name="twitch_smite">
-		<property name="command" value="#smite" />
-		<property name="category" value="Special" />
-		<property name="event_name" value="buff_smite" />
-		<property name="default_cost" value="0" />
-		<property name="ignore_cooldown" value="true" />
-		<property name="add_cooldown" value="false" />
-		<property name="cooldown_blocked" value="false" />
-		<property name="waiting_blocked" value="false" />
-		<property name="only_usable_type" value="Name" />
-		<property name="only_usable_by" value="ponkberry" />
-	</action>
-
-	<action name="twitch_buffBish">
-		<property name="command" value="#bish" />
-		<property name="category" value="Special" />
-		<property name="event_name" value="buff_bish" />
-		<property name="default_cost" value="-100" />
-		<property name="ignore_cooldown" value="true" />
-		<property name="add_cooldown" value="false" />
-		<property name="cooldown_blocked" value="false" />
-		<property name="waiting_blocked" value="false" />
-		<property name="only_usable_type" value="Name" />
-		<property name="only_usable_by" value="ponkberry,msspenny" />
-	</action>	
 	
 	<!-- Mod Commands -->
 	
-	<!-- <action name="twitch_mod_tpbackpack">
+	<action name="twitch_mod_tpbackpack">
 		<property name="command" value="#tp_backpack" />
 		<property name="title_key" value="TwitchAction_TeleportToBackpack" />
 		<property name="description_key" value="TwitchAction_TeleportToBackpackDesc" />
@@ -1986,19 +1748,6 @@
 		<property name="cooldown_blocked" value="false" />
 		<property name="waiting_blocked" value="false" />
 		<property name="only_usable_type" value="Mods" />
-	</action> -->
-
-    <action name="twitch_mod_tpbackpackponk">
-		<property name="command" value="#lol" />
-		<property name="category" value="Special" />
-		<property name="event_name" value="action_teleport_backpack" />
-		<property name="default_cost" value="0" />
-		<property name="ignore_cooldown" value="true" />
-		<property name="add_cooldown" value="false" />
-		<property name="cooldown_blocked" value="false" />
-		<property name="waiting_blocked" value="false" />
-		<property name="only_usable_type" value="Name" />
-		<property name="only_usable_by" value="ponkberry,msspenny,ObiWannCoyote" />
 	</action>
 	
 	<!-- 
