@@ -1921,6 +1921,7 @@
 	</action>
 	
 	<action name="twitch_Dance">
+		<property name="command" value="#dance_off" />
 		<property name="title" value="Dance Off" />
 		<property name="title_key" value="TwitchAction_BuffDanceOff" />
 		<property name="description_key" value="TwitchAction_BuffDanceOffDesc" />
