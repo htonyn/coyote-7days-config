@@ -794,7 +794,84 @@
 			<property name="removes_buff" value="twitch_buffSlow" param1="removebuff4" />
 			<property name="target_group" value="party" />
 		</action>
-	</action_sequence>	
+	</action_sequence>
+
+	<!-- Custom Multi Setup -->
+	<action_sequence name="player_template">
+		<property name="allow_user_trigger" value="false" />
+		<property name="category" value="twitch_actions" />
+
+		<action class="AddPartyToGroup">
+			<property name="phase" value="0" />
+			<property name="group_name" value="party" />
+			<property name="twitch_negative" value="false" param1="twitch_negative" />
+		</action>
+
+		<action class="PlaySound">
+			<property name="sound" value="" param1="twitchsound" />
+			<property name="phase" value="1" />
+			<property name="inside_head" value="true" />
+			<property name="target_group" value="party" />
+		</action>
+
+		<action class="PlaySound">
+			<property name="phase" value="1" />
+			<property name="sound" value="minibike_horn" param1="buffsound" />
+			<property name="inside_head" value="true" />
+			<property name="target_group" value="party" />
+			<property name="delay" value="0" param1="buffsounddelay" />
+		</action>
+
+		<action class="AddBuff">
+			<property name="phase" value="1" />
+			<property name="buff_name" value="twitch_buffFast" param1="addbuff" />
+			<property name="removes_buff" value="twitch_buffSlow" param1="removebuff" />
+			<property name="target_group" value="party" />
+		</action>
+
+		<action class="SpawnContainer">
+			<property name="entity_names" value="TwitchAction_SupplyWeapon1" param1="cratename" />
+			<property name="spawn_count" value="1" param1="spawncount" />
+			<property name="min_distance" value="4" />
+			<property name="max_distance" value="8" />
+			<property name="safe_spawn" value="true" />
+		</action>
+	</action_sequence>
+
+	<action_sequence name="spawn_group_crate_template">
+		<property name="allow_user_trigger" value="false" />
+		<property name="category" value="twitch_actions" />
+
+		<action class="SpawnContainer">
+			<property name="entity_names" value="TwitchAction_SupplyWeapon1" param1="cratename" />
+			<property name="spawn_count" value="1" param1="spawncount" />
+			<property name="min_distance" value="4" />
+			<property name="max_distance" value="8" />
+			<property name="safe_spawn" value="true" />
+			<property name="target_group" value="party" />
+		</action>
+
+		<action class="PlaySound">
+			<property name="sound" value="twitch_good_spawn" />
+			<property name="phase" value="1" />
+		</action>
+
+		<action class="PlaySound">
+			<property name="sound" value="open_supply_crate" />
+			<property name="phase" value="1" />
+		</action>
+	</action_sequence>
+
+	<!-- Custom Player -->
+	<action_sequence name="player" template="player_template">
+		<variable name="addbuff" value="twitch_buffBoostMelee" />
+		<variable name="removebuff" value="" />
+		<variable name="cratename" value="TwitchAction_Meggs" />
+	</action_sequence>
+
+	<action_sequence name="spawn_group" template="spawn_group_crate_template">
+		<variable name="cratename" value="TwitchAction_Meggs" />
+	</action_sequence>
 
 	<!-- Custom Buffs -->
 
@@ -802,7 +879,7 @@
 		<variable name="buffsound" value="" />
 		<variable name="twitchsound" value="twitch_regen_buff" />
 		<variable name="addbuff1" value="twitch_regen" />
-		<variable name="addbuff2" value="twitch_energize" />
+		<variable name="addbuff2" value="twitch_energizeShort" />
 		<variable name="addbuff3" value="twitch_buffBoostRange" />
 		<variable name="addbuff4" value="twitch_buffBoostMelee" />
 		<variable name="removebuff1" value="twitch_hurt" />
@@ -1087,8 +1164,9 @@
 		<variable name="alertsound" value="hulkalert" />
 	</action_sequence>	
 
-	<action_sequence name="spawn_snake" template="spawn_single">
+	<action_sequence name="spawn_snake" template="spawn_horde">
 		<variable name="zombiename" value="animalSnake" />
+		<variable name="spawncount" value="10" />
 		<variable name="alertsound" value="snakealert" />
 	</action_sequence>
 

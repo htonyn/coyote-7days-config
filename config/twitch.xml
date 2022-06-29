@@ -584,6 +584,21 @@
 		<property name="only_usable_by" value="ponkberry" />
 	</action>
 
+	<action name="twitch_titan_custom">
+		<property name="command" value="#custom_titan" />
+		<property name="title" value="custom_titan" />
+		<property name="description" value="idk" />
+		<property name="category" value="Spawns" />
+		<property name="event_name" value="spawn_titan" />
+		<property name="default_cost" value="0" />
+		<property name="ignore_cooldown" value="true" />
+		<property name="add_cooldown" value="false" />
+		<property name="cooldown_blocked" value="false" />
+		<property name="waiting_blocked" value="false" />
+		<property name="only_usable_type" value="Name" />
+		<property name="only_usable_by" value="ponkberry" />
+	</action>
+
 	<action name="twitch_frendz">
 		<property name="command" value="#frendz" />
 		<property name="title" value="frendz" />
@@ -642,6 +657,22 @@
 		<property name="only_usable_by" value="ponkberry" />
 	</action>
 
+	<!-- Super Command Test -->
+
+	<action name="twitch_player">
+		<property name="command" value="#player" />
+		<property name="title" value="player" />
+		<property name="description" value="idk" />
+		<property name="category" value="Spawns" />
+		<property name="event_name" value="player" />
+		<property name="default_cost" value="0" />
+		<property name="ignore_cooldown" value="true" />
+		<property name="add_cooldown" value="false" />
+		<property name="cooldown_blocked" value="false" />
+		<property name="waiting_blocked" value="false" />
+		<property name="only_usable_type" value="Name" />
+		<property name="only_usable_by" value="ponkberry" />
+	</action>
 	
 	<!-- Supply Drops -->
 	
@@ -1137,6 +1168,13 @@
 		<property name="only_usable_by" value="ponkberry,ObiWannCoyote" />
 	</action>
 
+	<!-- Group Crate Test -->
+	<action name="twitch_group" extends="twitch_spawn_god">
+		<property name="command" value="#group" />
+		<property name="category" value="Special" />
+		<property name="event_name" value="spawn_group" />
+	</action>
+
     <!-- CUSTOM CRATE COMMANDS -->
 
 	<action name="twitch_cheer_knowledge1">
@@ -1181,7 +1219,7 @@
 		<property name="command" value="#coy_loot" />
 		<property name="start_gamestage" value="50" />
 		<property name="event_name" value="spawn_coyloot" />
-		<property name="default_cost" value="1000" />
+		<property name="default_cost" value="750" />
 		<property name="cooldown" value="120" />
 	</action>
 
@@ -1189,7 +1227,7 @@
 		<property name="command" value="#streamer_loot" />
 		<property name="start_gamestage" value="100" />
 		<property name="event_name" value="spawn_loot" />
-		<property name="default_cost" value="2000" />		
+		<property name="default_cost" value="1000" />		
 		<property name="cooldown" value="600" />
 	</action>
 
@@ -1875,7 +1913,7 @@
 		<property name="start_gamestage" value="15" />
 		<property name="event_name" value="action_big_heads" />
 		<property name="default_cost" value="150" />
-		<property name="is_positive" value="false" />
+		<property name="is_positive" value="true" />
 		<property name="cooldown" value="900" />
 		<property name="cooldown_blocked" value="true" />
 		
@@ -1890,7 +1928,7 @@
 		<property name="start_gamestage" value="15" />
 		<property name="event_name" value="action_dance_off" />
 		<property name="default_cost" value="150" />
-		<property name="is_positive" value="false" />
+		<property name="is_positive" value="true" />
 		<property name="cooldown" value="900" />
 		<property name="cooldown_blocked" value="true" />
 		
@@ -1969,7 +2007,7 @@
 		<property name="cooldown_blocked" value="false" />
 		<property name="waiting_blocked" value="false" />
 		<property name="only_usable_type" value="Name" />
-		<property name="only_usable_by" value="ponkberry,msspenny" />
+		<property name="only_usable_by" value="ponkberry,msspenny,ObiWannCoyote" />
 	</action>	
 	
 	<!-- Mod Commands -->

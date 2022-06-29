@@ -6833,6 +6833,36 @@ The abrasion healing rate is fastest with a first aid kit, then a medicated band
 		</effect_group>
 	</buff>
 
+	<buff name="twitch_energizeShort" name_key="TwitchBuff_EnergizeShort" icon="ui_game_symbol_twitch_energize" icon_color="175,175,255">
+		<stack_type value="replace"/>
+		<duration value="30"/>
+		<display_value value=".TwitchEnergizeTimer"/>
+		<display_value_format value="time"/>
+
+		<effect_group>
+			<passive_effect name="BuffBlink" operation="base_set" value="2" duration="0,3" tags="twitch_energize"/>
+			<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar=".TwitchEnergizeTimer" operation="set" value="30"/>
+			<triggered_effect trigger="onSelfBuffStack" action="ModifyCVar" cvar=".TwitchEnergizeTimer" operation="set" value="30"/>
+			<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar=".TwitchEnergizeTimer" operation="add" value="-1"/>
+			<triggered_effect trigger="onSelfBuffRemove" action="ModifyCVar" cvar=".TwitchEnergizeTimer" operation="set" value="0"/>
+			<triggered_effect trigger="onSelfEnteredGame" action="RemoveBuff" buff="twitch_energize"/>
+
+			<triggered_effect trigger="onSelfBuffStart" action="RemoveBuff" buff="twitch_energize" >
+				<requirement name="HasBuff" buff="twitch_voteEnergize"/>
+			</triggered_effect>
+
+			<triggered_effect trigger="onSelfBuffUpdate" action="PlaySound" sound="twitch_good_buff_ended" play_in_head="true">
+				<requirement name="CVarCompare" cvar=".TwitchEnergizeTimer" operation="LTE" value="0"/>
+			</triggered_effect>
+		</effect_group>
+
+		<effect_group>
+			<triggered_effect trigger="onSelfBuffUpdate" action="ModifyStats" stat="Stamina" operation="set" value="500"/>
+			<passive_effect name="StaminaLoss" operation="base_set" value="0"/>
+			<passive_effect name="StaminaChangeOT" operation="base_set" value="0"/>
+		</effect_group>
+	</buff>
+
 <!-- ****************** Twitch Integration Buffs ****************** -->
 
 	<buff name="buffHeadShotsOnly" name_key="buffHeadShotsOnlyName" description_key="buffHeadShotsOnlyDesc" tooltip_key="buffHeadShotsOnlyTooltip" icon="ui_game_symbol_head_shot" icon_color="255,128,0" remove_on_death="false">
@@ -8044,8 +8074,6 @@ The abrasion healing rate is fastest with a first aid kit, then a medicated band
 			<passive_effect name="CelebrationKill" operation="base_set" value="1" />
 		</effect_group>
 	</buff>
-
-
 
 	<buff name="twitch_buffSillySounds" name_key="TwitchBuff_SillySounds" description_key="TwitchBuff_SillySoundsDesc" icon="ui_game_symbol_twitch_sound_effects" icon_color="175,175,255">
 		<stack_type value="replace"/>
