@@ -11080,6 +11080,33 @@
 			<item name="foodEgg" count="1,2"/>
 		</lootgroup>
 
+		<lootgroup name="twitch_crate_penny" count="all">
+			<item name="ammo762mmBulletBall" count="250,400"/>
+			<item name="ammoBundleCrossbowBoltFlaming" count="50,100"/>
+			<item name="medicalFirstAidKit" count="4,5"/>
+			<item name="drugSugarButts" count="2,3"/>
+			<item name="foodHoboStew" count="5,6"/>
+			<item name="drinkYuccaJuiceSmoothie" count="1,2"/>
+		</lootgroup>
+
+		<lootgroup name="twitch_crate_tabby" count="all">
+			<item name="ammoBundle9mmBulletBall" count="250,400"/>
+			<item name="ammo762mmBulletBall" count="50,100"/>
+			<item name="drugPainkillers" count="4,5"/>
+			<item name="foodBagOfPeanuts" count="2,3"/>
+			<item name="foodHoboStew" count="5,6"/>
+			<item name="DFFruitSmoothie" count="5,6"/>
+		</lootgroup>
+
+		<lootgroup name="twitch_crate_caw" count="all">
+			<item name="ammoBundle9mmBulletBall" count="250,400"/>
+			<item name="ammoRocketFrag" count="20,25"/>
+			<item name="medicalFirstAidKit" count="4,5"/>
+			<item name="drugEyeKandy" count="2,3"/>
+			<item name="foodHoboStew" count="5,6"/>
+			<item name="DFcoconutWater" count="5,6"/>
+		</lootgroup>
+
 		<lootgroup name="get_fucked" count="all">
 			<item name="DFturd" count="1"/>
 		</lootgroup>
@@ -15480,6 +15507,18 @@
 
 		<lootcontainer id="804" name="twitch_crate_get_fucked" count="1" size="6,2" destroy_on_close="true" sound_open="SupplyDrops/open_supply_crate" sound_close="SupplyDrops/close_supply_crate"  open_time="0.25" loot_quality_template="qualBaseTemplate" ignore_loot_abundance="true">
 			<item group="get_fucked"/>
+		</lootcontainer>
+
+		<lootcontainer id="851" name="twitch_crate_penny" count="1" size="6,2" destroy_on_close="true" sound_open="SupplyDrops/open_supply_crate" sound_close="SupplyDrops/close_supply_crate"  open_time="0.25" loot_quality_template="qualBaseTemplate" ignore_loot_abundance="true">
+			<item group="twitch_crate_penny"/>
+		</lootcontainer>
+
+		<lootcontainer id="852" name="twitch_crate_tabby" count="1" size="6,2" destroy_on_close="true" sound_open="SupplyDrops/open_supply_crate" sound_close="SupplyDrops/close_supply_crate"  open_time="0.25" loot_quality_template="qualBaseTemplate" ignore_loot_abundance="true">
+			<item group="twitch_crate_tabby"/>
+		</lootcontainer>
+
+		<lootcontainer id="853" name="twitch_crate_caw" count="1" size="6,2" destroy_on_close="true" sound_open="SupplyDrops/open_supply_crate" sound_close="SupplyDrops/close_supply_crate"  open_time="0.25" loot_quality_template="qualBaseTemplate" ignore_loot_abundance="true">
+			<item group="twitch_crate_caw"/>
 		</lootcontainer>
 
 		<!-- Darkness Falls Loot Lists start here -->
