@@ -1314,6 +1314,12 @@
 		<variable name="alertsound" value="zombiemalealert" />
 	</action_sequence>
 
+	<action_sequence name="spawn_screamer" template="spawn_horde">
+		<variable name="zombiename" value="zombieScreamerFeral" />
+		<variable name="spawncount" value="2" />
+		<variable name="alertsound" value="zombiemalealert" />
+	</action_sequence>
+
 	<action_sequence name="cock" template="spawn_horde">
 		<variable name="zombiename" value="animalChicken" />
 		<variable name="spawncount" value="20" />
