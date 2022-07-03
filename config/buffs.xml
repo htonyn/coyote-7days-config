@@ -6840,14 +6840,14 @@ The abrasion healing rate is fastest with a first aid kit, then a medicated band
 		<display_value_format value="time"/>
 
 		<effect_group>
-			<passive_effect name="BuffBlink" operation="base_set" value="2" duration="0,3" tags="twitch_energize"/>
+			<passive_effect name="BuffBlink" operation="base_set" value="2" duration="0,3" tags="twitch_energizeShort"/>
 			<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar=".TwitchEnergizeTimer" operation="set" value="30"/>
 			<triggered_effect trigger="onSelfBuffStack" action="ModifyCVar" cvar=".TwitchEnergizeTimer" operation="set" value="30"/>
 			<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar=".TwitchEnergizeTimer" operation="add" value="-1"/>
 			<triggered_effect trigger="onSelfBuffRemove" action="ModifyCVar" cvar=".TwitchEnergizeTimer" operation="set" value="0"/>
-			<triggered_effect trigger="onSelfEnteredGame" action="RemoveBuff" buff="twitch_energize"/>
+			<triggered_effect trigger="onSelfEnteredGame" action="RemoveBuff" buff="twitch_energizeShort"/>
 
-			<triggered_effect trigger="onSelfBuffStart" action="RemoveBuff" buff="twitch_energize" >
+			<triggered_effect trigger="onSelfBuffStart" action="RemoveBuff" buff="twitch_energizeShort" >
 				<requirement name="HasBuff" buff="twitch_voteEnergize"/>
 			</triggered_effect>
 

@@ -1,5 +1,12 @@
 <twitch_events>
+	<bit_event event_title="Testing Bit Event" event_name="buff_nostealth" start_amount="1000" end_amount="1001" 
+		safe_allowed="false" cooldown_allowed="false" vote_allowed="false" pimp_pot_add="10" />
 
+	<sub_event event_title="Testing Sub Event" event_name="buff_bish" start_amount="0"
+		safe_allowed="false" cooldown_allowed="false" vote_allowed="false" pimp_pot_add="3" />
+
+	<gift_sub_event event_title="Testing Gift Sub Event" event_name="spawn_standard" start_amount="1" 
+		 safe_allowed="false" cooldown_allowed="false" vote_allowed="false" />
 	<!-- Bit Events
 			
 		event_title - The title that shows in chat when the event fires.

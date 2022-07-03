@@ -5557,6 +5557,12 @@
 			<property name="LootListOnDeath" value="twitch_crate_test"/>
 		</entity_class>
 
+		<entity_class name="TwitchAction_CrateGetFucked" extends="twitch_crate_template">
+			<property name="HideInSpawnMenu" value="true"/>
+			<property name="Mesh" value="#Entities/LootContainers?crate_store_MoPowerPrefab.prefab"/>
+			<property name="LootListOnDeath" value="twitch_crate_get_fucked"/>
+		</entity_class>
+
 		<entity_class name="TwitchAction_Meggs" extends="twitch_crate_template">
 			<property name="HideInSpawnMenu" value="true"/>
 			<property name="Mesh" value="#Entities/LootContainers?crate_store_ShamwayPrefab.prefab"/>

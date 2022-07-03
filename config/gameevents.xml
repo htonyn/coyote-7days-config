@@ -923,13 +923,6 @@
 		</action>
 	</action_sequence>
 
-	<action_sequence name="buff_cute" template="buff_template">
-		<variable name="buffsound" value="" />
-		<variable name="twitchsound" value="twitch_good_buff" />
-		<variable name="addbuff" value="twitch_buffSillySounds" />
-		<variable name="removebuff" value="" />
-	</action_sequence>
-
 	<!-- Buff Templates -->
 
 	<action_sequence name="buff_vision_template">
@@ -1420,6 +1413,10 @@
 
 	<action_sequence name="spawn_test" template="spawn_crate_template">
 		<variable name="cratename" value="TwitchAction_CrateTest" />
+	</action_sequence>
+
+	<action_sequence name="spawn_get_fucked" template="spawn_crate_template">
+		<variable name="cratename" value="TwitchAction_CrateGetFucked" />
 	</action_sequence>
 
 	<action_sequence name="spawn_custom1" template="spawn_crate_template">
