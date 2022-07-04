@@ -21,7 +21,7 @@
 	<!-- Categories must be defined at the top. Must at least have one. Safe bet you should probably keep "Commands" in there and at the top. -->
 	<!-- Used to define the order the categories show in the UI and icon -->
 	<category name="Commands" display_name="TwitchActionCategory_Commands" />
-	<category name="Players" />
+	<category name="Players" display_name="Players" icon="ui_game_symbol_twitch_drop"/>
 	<category name="Spawns" display_name="TwitchActionCategory_Spawns" icon="ui_game_symbol_twitch_spawn" />
 	<category name="Supplies" display_name="TwitchActionCategory_Supplies" icon="ui_game_symbol_twitch_drop" />
 	<category name="Buffs" display_name="TwitchActionCategory_Buffs" icon="ui_game_symbol_twitch_buffs" />
@@ -674,19 +674,30 @@
 	</action>
 
 	<!-- Super Command Test -->
+	<action name="twitch_player_template">
+		<property name="default_cost" value="0" />
+		<property name="category" value="Supplies" />
+		<property name="ignore_cooldown" value="true" />
+		<property name="add_cooldown" value="false" />
+		<property name="cooldown_blocked" value="false" />
+		<property name="waiting_blocked" value="false" />
+        <property name="start_gamestage" value="100" />
+		<property name="cooldown" value="180" />
+	</action>
+
 	<action name="twitch_player_penny">
 		<property name="command" value="#penny" />
 		<property name="title" value="penny" />
 		<property name="description" value="idk" />
 		<property name="category" value="Players" />
 		<property name="event_name" value="penny" />
-		<property name="default_cost" value="0" />
-		<property name="ignore_cooldown" value="true" />
-		<property name="add_cooldown" value="false" />
-		<property name="cooldown_blocked" value="false" />
-		<property name="waiting_blocked" value="false" />
-		<property name="only_usable_type" value="Name" />
-		<property name="only_usable_by" value="ponkberry" />
+		<property name="default_cost" value="750" />
+		<property name="add_cooldown" value="true" />
+		<property name="is_positive" value="true" />
+		<property name="cooldown_blocked" value="true" />
+		<property name="waiting_blocked" value="true" />
+        <property name="start_gamestage" value="50" />
+		<property name="cooldown" value="300" />
 	</action>
 	
 	<action name="twitch_player_tabby">
@@ -695,13 +706,13 @@
 		<property name="description" value="idk" />
 		<property name="category" value="Players" />
 		<property name="event_name" value="tabby" />
-		<property name="default_cost" value="0" />
-		<property name="ignore_cooldown" value="true" />
-		<property name="add_cooldown" value="false" />
-		<property name="cooldown_blocked" value="false" />
-		<property name="waiting_blocked" value="false" />
-		<property name="only_usable_type" value="Name" />
-		<property name="only_usable_by" value="ponkberry" />
+		<property name="default_cost" value="750" />
+		<property name="is_positive" value="true" />
+		<property name="add_cooldown" value="true" />
+		<property name="cooldown_blocked" value="true" />
+		<property name="waiting_blocked" value="true" />
+        <property name="start_gamestage" value="50" />
+		<property name="cooldown" value="300" />
 	</action>
 	
 	<action name="twitch_player_caw">
@@ -710,13 +721,13 @@
 		<property name="description" value="idk" />
 		<property name="category" value="Players" />
 		<property name="event_name" value="caw" />
-		<property name="default_cost" value="0" />
-		<property name="ignore_cooldown" value="true" />
-		<property name="add_cooldown" value="false" />
-		<property name="cooldown_blocked" value="false" />
-		<property name="waiting_blocked" value="false" />
-		<property name="only_usable_type" value="Name" />
-		<property name="only_usable_by" value="ponkberry" />
+		<property name="default_cost" value="750" />
+		<property name="is_positive" value="true" />
+		<property name="add_cooldown" value="true" />
+		<property name="cooldown_blocked" value="true" />
+		<property name="waiting_blocked" value="true" />
+        <property name="start_gamestage" value="50" />
+		<property name="cooldown" value="300" />
 	</action>
 	
 	<!-- Supply Drops -->
