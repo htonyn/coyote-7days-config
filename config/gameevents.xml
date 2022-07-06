@@ -870,7 +870,7 @@
 	</action_sequence>
 
 	<action_sequence name="penny" template="player_template">
-		<variable name="addbuff" value="twitch_buffFast" />
+		<variable name="addbuff" value="twitch_energize" />
 		<variable name="removebuff" value="" />
 		<variable name="cratename" value="TwitchAction_Penny" />
 	</action_sequence>
