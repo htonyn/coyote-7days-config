@@ -675,14 +675,12 @@
 
 	<!-- Super Command Test -->
 	<action name="twitch_player_template">
-		<property name="default_cost" value="0" />
-		<property name="category" value="Supplies" />
-		<property name="ignore_cooldown" value="true" />
-		<property name="add_cooldown" value="false" />
+		<property name="category" value="Players" />
+		<property name="default_cost" value="750" />
+		<property name="add_cooldown" value="true" />
+		<property name="is_positive" value="true" />
 		<property name="cooldown_blocked" value="false" />
-		<property name="waiting_blocked" value="false" />
-        <property name="start_gamestage" value="100" />
-		<property name="cooldown" value="180" />
+		<property name="waiting_blocked" value="true" />
 	</action>
 
 	<action name="twitch_player_penny">
@@ -694,7 +692,7 @@
 		<property name="default_cost" value="750" />
 		<property name="add_cooldown" value="true" />
 		<property name="is_positive" value="true" />
-		<property name="cooldown_blocked" value="true" />
+		<property name="cooldown_blocked" value="false" />
 		<property name="waiting_blocked" value="true" />
         <property name="start_gamestage" value="50" />
 		<property name="cooldown" value="300" />
@@ -728,6 +726,13 @@
 		<property name="waiting_blocked" value="true" />
         <property name="start_gamestage" value="50" />
 		<property name="cooldown" value="300" />
+	</action>
+	
+	<action name="twitch_player_megs" extends="twitch_player_template">
+		<property name="command" value="#megs" />
+		<property name="title" value="megs" />
+		<property name="description" value="idk" />
+		<property name="event_name" value="megs" />		
 	</action>
 	
 	<!-- Supply Drops -->
@@ -1313,6 +1318,7 @@
 		<property name="command" value="#smort" />
 		<property name="category" value="Special" />
 		<property name="event_name" value="spawn_knowledge" />
+		<property name="only_usable_by" value="ponkberry,ObiWannCoyote,msspenny" />
 	</action>
 
 	<action name="twitch_test" extends="twitch_spawn_god">
@@ -1325,6 +1331,7 @@
 		<property name="command" value="#getfucked" />
 		<property name="category" value="Special" />
 		<property name="event_name" value="spawn_get_fucked" />
+		<property name="only_usable_by" value="ponkberry,ObiWannCoyote,msspenny,starrshine" />
 	</action>
 
 	<action name="twitch_erangel_med_surplus" extends="twitch_spawn_god">
@@ -2014,7 +2021,7 @@
 		<property name="cooldown_blocked" value="false" />
 		<property name="waiting_blocked" value="false" />
 		<property name="only_usable_type" value="Name" />
-		<property name="only_usable_by" value="ponkberry,msspenny" />
+		<property name="only_usable_by" value="ponkberry,msspenny,beanbatter" />
 	</action>
 
     <action name="twitch_rigged">
@@ -2055,7 +2062,7 @@
 		<property name="cooldown_blocked" value="false" />
 		<property name="waiting_blocked" value="false" />
 		<property name="only_usable_type" value="Name" />
-		<property name="only_usable_by" value="ponkberry" />
+		<property name="only_usable_by" value="ponkberry,msspenny,beanbatter" />
 	</action>
 
 	<action name="twitch_buffBish">
@@ -2068,7 +2075,7 @@
 		<property name="cooldown_blocked" value="false" />
 		<property name="waiting_blocked" value="false" />
 		<property name="only_usable_type" value="Name" />
-		<property name="only_usable_by" value="ponkberry,msspenny,ObiWannCoyote" />
+		<property name="only_usable_by" value="ponkberry,msspenny,beanbatter,ObiWannCoyote" />
 	</action>	
 	
 	<!-- Mod Commands -->

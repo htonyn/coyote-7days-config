@@ -11086,7 +11086,7 @@
 			<item name="medicalFirstAidKit" count="4,5"/>
 			<item name="drugSugarButts" count="2,3"/>
 			<item name="foodHoboStew" count="5,6"/>
-			<item name="drinkYuccaJuiceSmoothie" count="1,2"/>
+			<item name="drinkYuccaJuiceSmoothie" count="5,6"/>
 		</lootgroup>
 
 		<lootgroup name="twitch_crate_tabby" count="all">
@@ -11105,6 +11105,15 @@
 			<item name="drugEyeKandy" count="2,3"/>
 			<item name="foodHoboStew" count="5,6"/>
 			<item name="DFcoconutWater" count="5,6"/>
+		</lootgroup>
+
+		<lootgroup name="twitch_crate_megs" count="all">
+			<item name="ammo9mmBulletBall" count="250,400"/>
+			<item name="ammo44MagnumBulletBall" count="50,100"/>
+			<item name="medicalFirstAidKit" count="4,5"/>
+			<item name="drugSugarButts" count="2,3"/>
+			<item name="foodHoboStew" count="5,6"/>
+			<item name="drinkYuccaJuiceSmoothie" count="5,6"/>
 		</lootgroup>
 
 		<lootgroup name="get_fucked" count="all">
@@ -15519,6 +15528,10 @@
 
 		<lootcontainer id="853" name="twitch_crate_caw" count="1" size="6,2" destroy_on_close="true" sound_open="SupplyDrops/open_supply_crate" sound_close="SupplyDrops/close_supply_crate"  open_time="0.25" loot_quality_template="qualBaseTemplate" ignore_loot_abundance="true">
 			<item group="twitch_crate_caw"/>
+		</lootcontainer>
+
+		<lootcontainer id="854" name="twitch_crate_megs" count="1" size="6,2" destroy_on_close="true" sound_open="SupplyDrops/open_supply_crate" sound_close="SupplyDrops/close_supply_crate"  open_time="0.25" loot_quality_template="qualBaseTemplate" ignore_loot_abundance="true">
+			<item group="twitch_crate_megs"/>
 		</lootcontainer>
 
 		<!-- Darkness Falls Loot Lists start here -->

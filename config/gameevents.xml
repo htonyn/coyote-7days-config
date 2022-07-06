@@ -875,7 +875,7 @@
 		<variable name="cratename" value="TwitchAction_Penny" />
 	</action_sequence>
 
-		<action_sequence name="tabby" template="player_template">
+	<action_sequence name="tabby" template="player_template">
 		<variable name="addbuff" value="twitch_energize" />
 		<variable name="removebuff" value="" />
 		<variable name="cratename" value="TwitchAction_Tabby" />
@@ -885,6 +885,12 @@
 		<variable name="addbuff" value="twitch_buffBoostMelee" />
 		<variable name="removebuff" value="" />
 		<variable name="cratename" value="TwitchAction_Caw" />
+	</action_sequence>
+
+	<action_sequence name="megs" template="player_template">
+		<variable name="addbuff" value="twitch_regen" />
+		<variable name="removebuff" value="" />
+		<variable name="cratename" value="TwitchAction_Megs" />
 	</action_sequence>
 
 	<action_sequence name="spawn_group" template="spawn_group_crate_template">
