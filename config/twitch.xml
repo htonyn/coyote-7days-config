@@ -2052,7 +2052,20 @@
 		<property name="waiting_blocked" value="false" />
 		<property name="only_usable_type" value="Name" />
 		<property name="only_usable_by" value="ponkberry,msspenny,beanbatter,ObiWannCoyote" />
-	</action>	
+	</action>
+
+	<action name="twitch_buffReverseReverse">
+		<property name="command" value="#reversereverse" />
+		<property name="category" value="Special" />
+		<property name="event_name" value="action_changedirection_2" />
+		<property name="default_cost" value="-100" />
+		<property name="ignore_cooldown" value="true" />
+		<property name="add_cooldown" value="false" />
+		<property name="cooldown_blocked" value="false" />
+		<property name="waiting_blocked" value="false" />
+		<property name="only_usable_type" value="Name" />
+		<property name="only_usable_by" value="ponkberry,msspenny,ObiWannCoyote" />
+	</action>
 	
 	<!-- Mod Commands -->
 	

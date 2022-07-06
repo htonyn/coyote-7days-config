@@ -796,6 +796,35 @@
 		</action>
 	</action_sequence>
 
+	<action_sequence name="action_changedirection_2">
+		<property name="category" value="twitch_actions" />
+		
+		<action class="AddPartyToGroup">
+			<property name="phase" value="0" />
+			<property name="group_name" value="party" />
+		</action>
+
+		<action class="PlaySound">
+			<property name="sound" value="twitch_reverse" />
+			<property name="phase" value="1" />
+		</action>
+
+		<action class="FlipRotation">
+			<property name="phase" value="2" />
+			<property name="target_group" value="party" />
+		</action>
+
+		<action class="Delay">
+			<property name="time" value="5" />
+			<property name="phase" value="3" />
+		</action>
+
+		<action class="FlipRotation">
+			<property name="phase" value="3" />
+			<property name="target_group" value="party" />
+		</action>
+	</action_sequence>
+
 	<!-- Custom Multi Setup -->
 	<action_sequence name="player_template">
 		<property name="allow_user_trigger" value="false" />
