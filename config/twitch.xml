@@ -683,21 +683,21 @@
 		<property name="waiting_blocked" value="true" />
 	</action>
 
-	<action name="twitch_player_penny">
+	<action name="twitch_player_penny" extends="twitch_player_template">
 		<property name="command" value="#penny" />
 		<property name="title" value="penny" />
 		<property name="description" value="idk" />
 		<property name="event_name" value="penny" />
 	</action>
 	
-	<action name="twitch_player_tabby">
+	<action name="twitch_player_tabby" extends="twitch_player_template">
 		<property name="command" value="#tabby" />
 		<property name="title" value="tabby" />
 		<property name="description" value="idk" />
 		<property name="event_name" value="tabby" />
 	</action>
 	
-	<action name="twitch_player_caw">
+	<action name="twitch_player_caw" extends="twitch_player_template">
 		<property name="command" value="#caw" />
 		<property name="title" value="caw" />
 		<property name="description" value="idk" />

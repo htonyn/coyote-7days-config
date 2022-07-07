@@ -837,7 +837,20 @@
 		</action>
 
 		<action class="PlaySound">
+			<property name="sound" value="twitch_good_spawn" />
 			<property name="phase" value="1" />
+		</action>
+
+		<action class="SpawnContainer">
+			<property name="entity_names" value="TwitchAction_SupplyWeapon1" param1="cratename" />
+			<property name="spawn_count" value="1" param1="spawncount" />
+			<property name="min_distance" value="4" />
+			<property name="max_distance" value="8" />
+			<property name="safe_spawn" value="true" />
+		</action>
+
+		<action class="PlaySound">
+			<property name="phase" value="2" />
 			<property name="sound" value="minibike_horn" param1="buffsound" />
 			<property name="inside_head" value="true" />
 			<property name="target_group" value="party" />
@@ -845,24 +858,10 @@
 		</action>
 
 		<action class="AddBuff">
-			<property name="phase" value="1" />
+			<property name="phase" value="2" />
 			<property name="buff_name" value="twitch_buffFast" param1="addbuff" />
 			<property name="removes_buff" value="twitch_buffSlow" param1="removebuff" />
 			<property name="target_group" value="party" />
-		</action>
-
-		<action class="PlaySound">
-			<property name="sound" value="twitch_good_spawn" />
-			<property name="phase" value="2" />
-		</action>
-
-		<action class="SpawnContainer">
-			<property name="phase" value="2" />
-			<property name="entity_names" value="TwitchAction_SupplyWeapon1" param1="cratename" />
-			<property name="spawn_count" value="1" param1="spawncount" />
-			<property name="min_distance" value="4" />
-			<property name="max_distance" value="8" />
-			<property name="safe_spawn" value="true" />
 		</action>
 	</action_sequence>
 
@@ -899,28 +898,28 @@
 
 	<action_sequence name="penny" template="player_template">
 		<variable name="addbuff" value="twitch_energize" />
-		<variable name="buffsound" value="twitch_energize_buff" />
+		<!-- <variable name="buffsound" value="twitch_energize_buff" /> -->
 		<variable name="removebuff" value="" />
 		<variable name="cratename" value="TwitchAction_Penny" />
 	</action_sequence>
 
 	<action_sequence name="tabby" template="player_template">
 		<variable name="addbuff" value="twitch_energize" />
-		<variable name="buffsound" value="twitch_energize_buff" />
+		<!-- <variable name="buffsound" value="twitch_energize_buff" /> -->
 		<variable name="removebuff" value="" />
 		<variable name="cratename" value="TwitchAction_Tabby" />
 	</action_sequence>
 
 	<action_sequence name="caw" template="player_template">
 		<variable name="addbuff" value="twitch_buffBoostMelee" />
-		<variable name="buffsound" value="twitch_strength" />
+		<!-- <variable name="buffsound" value="twitch_strength" /> -->
 		<variable name="removebuff" value="" />
 		<variable name="cratename" value="TwitchAction_Caw" />
 	</action_sequence>
 
 	<action_sequence name="megs" template="player_template">
 		<variable name="addbuff" value="twitch_regen" />
-		<variable name="buffsound" value="twitch_regen_buff" />
+		<!-- <variable name="buffsound" value="twitch_regen_buff" /> -->
 		<variable name="removebuff" value="" />
 		<variable name="cratename" value="TwitchAction_Megs" />
 	</action_sequence>
