@@ -815,7 +815,7 @@
 		</action>
 
 		<action class="Delay">
-			<property name="time" value="5" />
+			<property name="time" value="1000" />
 			<property name="phase" value="3" />
 		</action>
 
@@ -898,28 +898,28 @@
 
 	<action_sequence name="penny" template="player_template">
 		<variable name="addbuff" value="twitch_energize" />
-		<!-- <variable name="buffsound" value="twitch_energize_buff" /> -->
+		<variable name="buffsound" value="twitch_energize_buff" />
 		<variable name="removebuff" value="" />
 		<variable name="cratename" value="TwitchAction_Penny" />
 	</action_sequence>
 
 	<action_sequence name="tabby" template="player_template">
 		<variable name="addbuff" value="twitch_energize" />
-		<!-- <variable name="buffsound" value="twitch_energize_buff" /> -->
+		<variable name="buffsound" value="twitch_energize_buff" />
 		<variable name="removebuff" value="" />
 		<variable name="cratename" value="TwitchAction_Tabby" />
 	</action_sequence>
 
 	<action_sequence name="caw" template="player_template">
 		<variable name="addbuff" value="twitch_buffBoostMelee" />
-		<!-- <variable name="buffsound" value="twitch_strength" /> -->
+		<variable name="buffsound" value="twitch_strength" />
 		<variable name="removebuff" value="" />
 		<variable name="cratename" value="TwitchAction_Caw" />
 	</action_sequence>
 
 	<action_sequence name="megs" template="player_template">
 		<variable name="addbuff" value="twitch_regen" />
-		<!-- <variable name="buffsound" value="twitch_regen_buff" /> -->
+		<variable name="buffsound" value="twitch_regen_buff" />
 		<variable name="removebuff" value="" />
 		<variable name="cratename" value="TwitchAction_Megs" />
 	</action_sequence>
