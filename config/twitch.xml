@@ -490,7 +490,7 @@
 		<property name="description" value="idk" />
 		<property name="category" value="Spawns" />
 		<property name="event_name" value="dionandfriends" />
-		<property name="default_cost" value="700" />
+		<property name="default_cost" value="500" />
 		<property name="add_cooldown" value="true" />
 		<property name="cooldown_blocked" value="true" />
 		<property name="waiting_blocked" value="true" />
