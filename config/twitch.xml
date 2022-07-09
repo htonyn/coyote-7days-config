@@ -677,7 +677,7 @@
 	<action name="twitch_player_template">
 		<property name="category" value="Players" />
 		<property name="default_cost" value="750" />
-		<property name="add_cooldown" value="true" />
+		<property name="add_cooldown" value="false" />
 		<property name="is_positive" value="true" />
 		<property name="cooldown_blocked" value="false" />
 		<property name="waiting_blocked" value="true" />

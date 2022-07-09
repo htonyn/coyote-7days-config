@@ -11108,8 +11108,8 @@
 		</lootgroup>
 
 		<lootgroup name="twitch_crate_megs" count="all">
-			<item name="ammo9mmBulletBall" count="250,400"/>
-			<item name="ammo44MagnumBulletBall" count="50,100"/>
+			<item name="DF44MagCoilround" count="100,150"/>
+			<item name="DF762mmCoilround" count="50,100"/>
 			<item name="medicalFirstAidKit" count="4,5"/>
 			<item name="drugSugarButts" count="2,3"/>
 			<item name="foodHoboStew" count="5,6"/>
