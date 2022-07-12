@@ -794,6 +794,14 @@
 			<property name="removes_buff" value="twitch_buffSlow" param1="removebuff4" />
 			<property name="target_group" value="party" />
 		</action>
+
+		<action class="AddItemDurability">
+			<property name="phase" value="1" />
+			<property name="items_location" value="Toolbelt" />
+			<property name="amount" value="0.25" />
+			<property name="is_percent" value="true" />
+			<property name="target_group" value="party" />
+		</action>
 	</action_sequence>
 
 	<action_sequence name="action_changedirection_2">
