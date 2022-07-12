@@ -11099,7 +11099,7 @@
 		</lootgroup>
 
 		<lootgroup name="twitch_crate_caw" count="all">
-			<item name="ammo9mmBulletBall" count="250,400"/>
+			<item name="ammo9mmBulletHP" count="250,400"/>
 			<item name="ammoRocketFrag" count="20,25"/>
 			<item name="medicalFirstAidKit" count="4,5"/>
 			<item name="drugEyeKandy" count="2,3"/>
@@ -11113,6 +11113,24 @@
 			<item name="medicalFirstAidKit" count="4,5"/>
 			<item name="drugSugarButts" count="2,3"/>
 			<item name="foodHoboStew" count="5,6"/>
+			<item name="drinkYuccaJuiceSmoothie" count="5,6"/>
+		</lootgroup>
+
+		<lootgroup name="twitch_crate_dad" count="all">
+			<item name="ammo762mmBulletBall" count="250,400"/>
+			<item name="ammo9mmBulletBall" count="150,200"/>
+			<item name="medicalFirstAidKit" count="4,5"/>
+			<item name="drugEyeKandy" count="2,3"/>
+			<item name="foodMeatStew" count="5,6"/>
+			<item name="drinkYuccaJuiceSmoothie" count="5,6"/>
+		</lootgroup>
+
+		<lootgroup name="twitch_crate_starr" count="all">
+			<item name="ammo762mmBulletBall" count="250,400"/>
+			<item name="ammo9mmBulletBall" count="150,200"/>
+			<item name="medicalFirstAidKit" count="4,5"/>
+			<item name="drugEyeKandy" count="2,3"/>
+			<item name="foodMeatStew" count="5,6"/>
 			<item name="drinkYuccaJuiceSmoothie" count="5,6"/>
 		</lootgroup>
 
