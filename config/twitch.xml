@@ -586,7 +586,7 @@
 	</action>
 
 	<action name="twitch_succubus_custom">
-		<property name="command" value="#custom_succubus" />
+		<property name="command" value="#succ" />
 		<property name="title" value="custom_succubus" />
 		<property name="description" value="idk" />
 		<property name="category" value="Spawns" />
