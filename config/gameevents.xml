@@ -924,6 +924,20 @@
 		<variable name="cratename" value="TwitchAction_Megs" />
 	</action_sequence>
 
+	<action_sequence name="dad" template="player_template">
+		<variable name="addbuff" value="twitch_buffFast" />
+		<variable name="buffsound" value="twitch_fast_buff" />
+		<variable name="removebuff" value="twitch_buffSlow" />
+		<variable name="cratename" value="TwitchAction_Dad" />
+	</action_sequence>
+
+	<action_sequence name="starr" template="player_template">
+		<variable name="addbuff" value="twitch_buffFast" />
+		<variable name="buffsound" value="twitch_fast_buff" />
+		<variable name="removebuff" value="twitch_buffSlow" />
+		<variable name="cratename" value="TwitchAction_Starr" />
+	</action_sequence>
+
 	<action_sequence name="spawn_group" template="spawn_group_crate_template">
 		<variable name="cratename" value="TwitchAction_Meggs" />
 	</action_sequence>

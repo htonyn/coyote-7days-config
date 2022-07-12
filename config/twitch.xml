@@ -710,6 +710,20 @@
 		<property name="description" value="idk" />
 		<property name="event_name" value="megs" />		
 	</action>
+
+	<action name="twitch_player_dad" extends="twitch_player_template">
+		<property name="command" value="#dad" />
+		<property name="title" value="dad" />
+		<property name="description" value="idk" />
+		<property name="event_name" value="dad" />		
+	</action>
+
+	<action name="twitch_player_starr" extends="twitch_player_template">
+		<property name="command" value="#starr" />
+		<property name="title" value="starr" />
+		<property name="description" value="idk" />
+		<property name="event_name" value="starr" />		
+	</action>
 	
 	<!-- Supply Drops -->
 	
