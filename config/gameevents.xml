@@ -965,6 +965,14 @@
 		<variable name="removebuff4" value="twitch_buffNoMelee" />
 	</action_sequence>
 
+	<action_sequence name="buff_poot" template="buff_template">
+		<variable name="buffsound" value="" />
+		<variable name="twitchsound" value="twitch_bad_buff" />
+		<variable name="addbuff" value="twitch_buffNoStealth" />
+		<variable name="removebuff" value="" />
+		<variable name="twitch_negative" value="false" />
+	</action_sequence>
+
 	<action_sequence name="buff_smite">
 		<property name="category" value="twitch_actions" />
 		<requirement class="NearbyEntities">
