@@ -1290,6 +1290,13 @@
 		<property name="cooldown" value="300" />
 	</action>
 
+	<action name="twitch_spawn_bean" extends="twitch_spawn_god">
+		<property name="command" value="#custom1" />
+		<property name="category" value="Special" />
+		<property name="event_name" value="spawn_bean" />
+		<property name="default_cost" value="0" />
+	</action>
+
 	<action name="twitch_spawn_custom1" extends="twitch_spawn_god">
 		<property name="command" value="#custom1" />
 		<property name="category" value="Special" />

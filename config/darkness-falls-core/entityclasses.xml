@@ -5569,6 +5569,12 @@
 			<property name="LootListOnDeath" value="twitch_crate_meggs"/>
 		</entity_class>
 
+		<entity_class name="TwitchAction_Bean" extends="twitch_crate_template">
+			<property name="HideInSpawnMenu" value="true"/>
+			<property name="Mesh" value="#Entities/LootContainers?crate_store_ShamwayPrefab.prefab"/>
+			<property name="LootListOnDeath" value="twitch_crate_bean"/>
+		</entity_class>
+
 		<entity_class name="TwitchAction_Penny" extends="twitch_crate_template">
 			<property name="HideInSpawnMenu" value="true"/>
 			<property name="Mesh" value="#Entities/LootContainers?crate_store_ShamwayPrefab.prefab"/>

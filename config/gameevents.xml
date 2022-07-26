@@ -1502,6 +1502,10 @@
 		<variable name="cratename" value="TwitchAction_Meggs" />
 	</action_sequence>
 
+	<action_sequence name="spawn_bean" template="spawn_crate_template">
+		<variable name="cratename" value="TwitchAction_Bean" />
+	</action_sequence>
+
 	<action_sequence name="spawn_test" template="spawn_crate_template">
 		<variable name="cratename" value="TwitchAction_CrateTest" />
 	</action_sequence>
